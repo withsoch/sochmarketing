@@ -1,50 +1,56 @@
 import { Icon } from "@/components/Icons";
+import { AuditButton } from "@/components/AuditButton";
 import { SERVICES } from "@/lib/content";
 
 /**
- * Replaces the old hand-coded SVG hex-flower (which baked 6 LinkedIn service
- * names into fixed-coordinate <text> elements) with a content-driven layout
- * that keeps the same visual grammar: a center orange statement card,
- * dashed outer ring, editorial serif center line - but renders the 6
- * services as a responsive chip grid generated from SERVICES.
+ * The /services hero visual: an editorial index of the six services rather
+ * than a decorative diagram. It tells you what is on the page and takes you
+ * straight to any of it — a table of contents, in the brand's serif idiom.
  */
 export function ServicesOverview() {
   return (
-    <div className="mx-auto w-full max-w-[560px]">
-      <div className="relative rounded-[28px] border border-dashed border-line p-6 sm:p-10">
-        <div className="mx-auto flex max-w-[19rem] flex-col items-center rounded-full bg-brand px-8 py-10 text-center shadow-[var(--shadow-lift)]">
-          <svg viewBox="0 0 48 48" className="h-8 w-8 text-cream" aria-hidden="true">
-            <path
-              d="M14 25l7-7 5 5 10-10"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="3.2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-          <p
-            className="mt-3 text-[1.35rem] font-semibold leading-tight text-cream"
-            style={{ fontFamily: "var(--font-display)" }}
-          >
-            The most credible voice in your space
-          </p>
-        </div>
+    <div className="mx-auto w-full max-w-[30rem] rounded-2xl border border-line bg-white shadow-[var(--shadow-card)] lg:max-w-none">
+      <div className="flex items-baseline justify-between gap-4 px-6 pb-4 pt-6 sm:px-7">
+        <p className="text-[0.7rem] font-semibold uppercase tracking-[0.12em] text-muted">
+          On this page
+        </p>
+        <p className="text-[0.7rem] font-medium text-muted">
+          {SERVICES.length} services
+        </p>
+      </div>
 
-        <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3">
-          {SERVICES.map((s) => (
+      <ul className="border-t border-line">
+        {SERVICES.map((s, i) => (
+          <li key={s.slug} className="border-b border-line last:border-b-0">
             <a
-              key={s.slug}
               href={`#${s.slug}`}
-              className="flex flex-col items-center gap-2 rounded-2xl border border-line bg-white px-3 py-4 text-center transition-colors hover:border-ink/25"
+              className="group flex items-center gap-4 px-6 py-3.5 transition-colors hover:bg-mist sm:px-7"
             >
-              <Icon name={s.icon} className="h-6 w-6 text-brand" strokeWidth={1.5} />
-              <span className="text-[0.8rem] font-semibold leading-snug text-ink-soft">
+              <span
+                className="w-6 shrink-0 text-[0.75rem] font-medium text-muted transition-colors group-hover:text-brand"
+                style={{ fontVariantNumeric: "tabular-nums" }}
+              >
+                {String(i + 1).padStart(2, "0")}
+              </span>
+              <span className="min-w-0 flex-1 text-[0.95rem] font-medium leading-snug text-ink-soft transition-colors group-hover:text-ink">
                 {s.title}
               </span>
+              <Icon
+                name="arrow"
+                className="h-4 w-4 shrink-0 text-line transition-all duration-200 group-hover:translate-x-0.5 group-hover:text-brand"
+              />
             </a>
-          ))}
-        </div>
+          </li>
+        ))}
+      </ul>
+
+      <div className="flex flex-col gap-3 rounded-b-2xl bg-cream px-6 py-5 sm:flex-row sm:items-center sm:justify-between sm:px-7">
+        <p className="text-[0.85rem] leading-snug text-slate">
+          Not sure which one you need?
+        </p>
+        <AuditButton variant="secondary" size="md" className="shrink-0 cursor-pointer">
+          Get a free audit
+        </AuditButton>
       </div>
     </div>
   );

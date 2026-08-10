@@ -2,6 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Reveal } from "@/components/ui/Reveal";
+import { AuditButton } from "@/components/AuditButton";
+import { BookButton } from "@/components/BookButton";
 import { Icon } from "@/components/Icons";
 import { ServiceVisual } from "@/components/ServiceVisual";
 import { SERVICES } from "@/lib/content";
@@ -15,6 +17,8 @@ const LABELS: Record<string, string> = {
   "channel-strategy-coaching": "Coaching",
   "social-growth-audit": "Audit",
 };
+
+const num = (i: number) => String(i + 1).padStart(2, "0");
 
 export function ServicesShowcase() {
   const [active, setActive] = useState(SERVICES[0].slug);
@@ -36,12 +40,12 @@ export function ServicesShowcase() {
   }, []);
 
   return (
-    <section className="bg-white py-16 sm:py-20 lg:py-24">
+    <section className="bg-white pb-16 sm:pb-20 lg:pb-24">
       {/* mobile quick-jump chip strip */}
-      <div className="sticky top-16 z-20 border-b border-line bg-white/85 backdrop-blur lg:hidden">
+      <div className="sticky top-[4.5rem] z-20 border-b border-line bg-white/85 backdrop-blur lg:hidden">
         <div className="container-x overflow-x-auto py-3">
           <div className="flex w-max gap-2">
-            {SERVICES.map((s) => (
+            {SERVICES.map((s, i) => (
               <a
                 key={s.slug}
                 href={`#${s.slug}`}
@@ -51,6 +55,12 @@ export function ServicesShowcase() {
                     : "border-line text-ink-soft"
                 }`}
               >
+                <span
+                  className="mr-1.5 text-[0.65rem] text-muted"
+                  style={{ fontVariantNumeric: "tabular-nums" }}
+                >
+                  {num(i)}
+                </span>
                 {LABELS[s.slug]}
               </a>
             ))}
@@ -58,30 +68,38 @@ export function ServicesShowcase() {
         </div>
       </div>
 
-      <div className="container-x mt-6 grid gap-x-12 lg:mt-0 lg:grid-cols-[14rem_1fr] xl:gap-x-16">
+      <div className="container-x grid gap-x-12 pt-14 lg:grid-cols-[13rem_1fr] lg:pt-20 xl:gap-x-20">
         {/* sticky index rail (lg+) */}
         <aside className="hidden lg:block">
           <div className="sticky top-28 self-start">
-            <nav className="mt-6 space-y-0.5">
-              {SERVICES.map((s) => {
+            <p className="text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-muted">
+              Services
+            </p>
+            <nav className="mt-4 border-l border-line">
+              {SERVICES.map((s, i) => {
                 const isActive = active === s.slug;
                 return (
                   <a
                     key={s.slug}
                     href={`#${s.slug}`}
                     aria-current={isActive ? "true" : undefined}
-                    className={`group flex items-center gap-3 rounded-lg px-3 py-2.5 transition-colors ${
-                      isActive ? "bg-mist" : "hover:bg-mist/60"
+                    className={`group -ml-px flex items-baseline gap-3 border-l py-2 pl-4 transition-colors ${
+                      isActive ? "border-brand" : "border-transparent hover:border-line"
                     }`}
                   >
                     <span
-                      className={`h-1.5 w-1.5 rounded-full bg-brand transition-opacity ${
-                        isActive ? "opacity-100" : "opacity-0"
+                      className={`text-[0.7rem] transition-colors ${
+                        isActive ? "text-brand" : "text-muted"
                       }`}
-                    />
+                      style={{ fontVariantNumeric: "tabular-nums" }}
+                    >
+                      {num(i)}
+                    </span>
                     <span
-                      className={`text-sm font-medium transition-colors ${
-                        isActive ? "text-ink" : "text-muted group-hover:text-ink-soft"
+                      className={`text-[0.925rem] transition-colors ${
+                        isActive
+                          ? "font-medium text-ink"
+                          : "text-muted group-hover:text-ink-soft"
                       }`}
                     >
                       {LABELS[s.slug]}
@@ -91,36 +109,71 @@ export function ServicesShowcase() {
               })}
             </nav>
 
+            <div className="mt-8 border-t border-dashed border-line pt-6">
+              <p className="text-[0.85rem] leading-relaxed text-slate">
+                Take one service, or hand us the whole system.
+              </p>
+              <div className="mt-4">
+                <BookButton variant="dark" size="md" arrow>
+                  Book a call
+                </BookButton>
+              </div>
+            </div>
           </div>
         </aside>
 
         {/* editorial service rows */}
-        <div className="divide-y divide-line">
+        <div>
           {SERVICES.map((s, i) => {
             const flipped = i % 2 === 1;
             return (
-              <Reveal key={s.slug} className="py-14 first:pt-0 lg:py-20">
+              <Reveal
+                key={s.slug}
+                className="border-t border-dashed border-line py-14 first:border-t-0 first:pt-0 lg:py-20"
+              >
                 <article
                   id={s.slug}
                   ref={(el) => {
                     refs.current[s.slug] = el;
                   }}
-                  className="scroll-mt-28"
+                  className="scroll-mt-32"
                 >
-                  <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-14">
+                  <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
                     {/* copy */}
                     <div className={flipped ? "lg:order-2" : ""}>
-                      <h2 className="text-h3 text-ink">{s.title}</h2>
-                      <p className="mt-2 font-semibold text-brand-dark">{s.hook}</p>
-                      <p className="mt-3 text-[0.975rem] leading-relaxed text-slate">
+                      <div className="flex items-center gap-3">
+                        <span
+                          className="text-[0.8rem] font-semibold text-brand"
+                          style={{ fontVariantNumeric: "tabular-nums" }}
+                        >
+                          {num(i)}
+                        </span>
+                        <span className="h-px w-8 bg-line" />
+                        <span className="text-[0.72rem] font-semibold uppercase tracking-[0.12em] text-muted">
+                          {LABELS[s.slug]}
+                        </span>
+                      </div>
+
+                      <h2 className="mt-4 text-[clamp(1.55rem,1.2rem+1.1vw,2.15rem)] leading-[1.12]">
+                        {s.title}
+                      </h2>
+
+                      <p
+                        className="mt-3 text-[1.05rem] leading-snug text-ink-soft"
+                        style={{ fontFamily: "var(--font-display)", fontStyle: "italic" }}
+                      >
+                        {s.hook}
+                      </p>
+
+                      <p className="mt-4 text-[0.975rem] leading-relaxed text-slate">
                         {s.description}
                       </p>
 
-                      <ul className="mt-5 space-y-2.5">
+                      <ul className="mt-6 space-y-2.5 border-t border-line pt-5">
                         {s.points.map((p) => (
                           <li
                             key={p}
-                            className="flex items-start gap-3 text-[0.95rem] text-ink-soft"
+                            className="flex items-start gap-3 text-[0.925rem] text-ink-soft"
                           >
                             <Icon
                               name="check"
@@ -142,6 +195,21 @@ export function ServicesShowcase() {
               </Reveal>
             );
           })}
+
+          {/* rail CTA repeated inline for mobile, where the rail is hidden */}
+          <Reveal className="border-t border-dashed border-line pt-10 lg:hidden">
+            <p className="text-[0.975rem] leading-relaxed text-slate">
+              Take one service, or hand us the whole system.
+            </p>
+            <div className="mt-5 flex flex-col gap-3 sm:flex-row">
+              <BookButton variant="primary" size="lg" arrow>
+                Book a Discovery Call
+              </BookButton>
+              <AuditButton variant="secondary" size="lg" className="cursor-pointer">
+                Get a Free Social Audit
+              </AuditButton>
+            </div>
+          </Reveal>
         </div>
       </div>
     </section>

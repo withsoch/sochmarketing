@@ -313,6 +313,107 @@ export const CLIENT_LOGOS = [
   { name: "Lattice Ventures" },
 ];
 
+// ------------------------------------------------------------------
+//  Free Social Audit — landing page (/audit) and post-submit (/confirmation)
+// ------------------------------------------------------------------
+
+/** What we hand back. Rendered as a numbered editorial grid, not icon tiles. */
+export const AUDIT_DELIVERABLES: { title: string; body: string }[] = [
+  {
+    title: "Profile teardown",
+    body: "Bio, headline, pinned and featured content, read across every channel you gave us and scored against what actually turns a visitor into a lead.",
+  },
+  {
+    title: "Content review",
+    body: "Your last ten posts per channel: hooks, formats, cadence, and the specific gaps holding your reach back. Named, with examples from your own feed.",
+  },
+  {
+    title: "Positioning gaps",
+    body: "Where you blur into three competitors saying the same thing, and the angle that would make you the obvious choice instead.",
+  },
+  {
+    title: "90-day roadmap",
+    body: "A prioritised plan in the order we would run it. Yours to keep and execute, with us or without us.",
+  },
+];
+
+export const AUDIT_STEPS: { title: string; body: string }[] = [
+  {
+    title: "Send us your profile",
+    body: "One link and an email address. It takes under a minute, and there is nothing to install or schedule.",
+  },
+  {
+    title: "We read it by hand",
+    body: "Umair goes through your channels personally. No scoring tool, no scraped dashboard, no templated export.",
+  },
+  {
+    title: "You get the plan in 24 hours",
+    body: "A written breakdown in your inbox: what is working, what is costing you, and what to fix first.",
+  },
+];
+
+/** Things we deliberately do not do — the honest differentiator strip. */
+export const AUDIT_EXCLUSIONS = [
+  "No ad spend recommendations",
+  "No SEO tactics",
+  "No templated report",
+  "No obligation to work with us",
+];
+
+export const AUDIT_FAQS = [
+  {
+    q: "Is the audit actually free?",
+    a: "Yes, and there is no trial, no card and no call required to receive it. We do this because a written plan is the most honest sample of our work we can give you. If you want help executing it, the strategy call is there. If you would rather run it yourself, take it and run.",
+  },
+  {
+    q: "What do you need from me?",
+    a: "A link to your main profile on any platform, and an email address to send the report to. If you are active on more than one channel, add those links too and we will cover them all.",
+  },
+  {
+    q: "How long does it take?",
+    a: "The report lands within 24 hours of you submitting. If it has been longer than that, email hello@soch.co and we will chase it — every submission is reviewed by a person, so occasionally one gets stuck behind another.",
+  },
+  {
+    q: "Will this just be a pitch?",
+    a: "No. The report is a plan you can act on with or without us. There is one line at the end offering a strategy call. Everything above it is work.",
+  },
+  {
+    q: "Which platforms do you audit?",
+    a: "LinkedIn, Instagram, X, YouTube, TikTok and Facebook. Most founders send us LinkedIn plus one other channel. Send whichever ones you are actually trying to grow.",
+  },
+];
+
+/** Post-submit sequence shown on /confirmation. */
+export const CONFIRMATION_STEPS: { title: string; body: string }[] = [
+  {
+    title: "Umair reviews your profiles personally",
+    body: "Bio, headline, pinned content and your last ten posts, across every channel you shared. Every section, by hand.",
+  },
+  {
+    title: "The full breakdown lands in your inbox",
+    body: "What is working, what is costing you, and what to fix first — specific to your channels, within 24 hours.",
+  },
+  {
+    title: "Take the strategy call, or take the plan and run",
+    body: "The call is where we walk the findings together and decide what is worth doing first. Completely your call.",
+  },
+];
+
+export const CONFIRMATION_FAQS = [
+  {
+    q: "What does the audit actually cover?",
+    a: "We review your bio, headline, pinned content, and last ten posts across every channel you're active on. You get a written breakdown of what is working, what is costing you visibility, and what to fix first.",
+  },
+  {
+    q: "How does working together work?",
+    a: "We start with a strategy call to go through the audit findings. From there, most clients move into a full engagement covering profile, content, and community, across the channels that matter most for them. You approve everything before it goes live.",
+  },
+  {
+    q: "What should I have ready?",
+    a: "Nothing. Just check your inbox within 24 hours. If you want to move fast, book a strategy call now so we can go through the findings together.",
+  },
+];
+
 export const FAQS = [
   {
     q: "Do you run paid ads?",
