@@ -7,7 +7,7 @@ import { Icon, type IconName } from "@/components/Icons";
 export const metadata: Metadata = {
   title: "About. Built for Founders Done Being Invisible",
   description:
-    "Soch is an organic social media agency for founders and senior executives. We run personal branding, content, community and profile management across every channel, so your presence brings you work.",
+    "Soch is an organic social media agency for founders and senior executives. We run personal branding, content, community and profile management on LinkedIn, Instagram, X and TikTok, so your presence brings you work.",
 };
 
 const VALUES: { icon: IconName; title: string; body: string }[] = [
@@ -52,7 +52,7 @@ export default function AboutPage() {
           </Reveal>
           <Reveal delay={0.1}>
             <p className="lead mt-6 max-w-2xl">
-              Soch is a social media management agency led by Umair Shahzad, an award-winning LinkedIn creator and LinkedIn Top Voice, recognised globally in Venture Capital. We work with founders and senior executives who want their presence, across every channel, to reflect the seriousness of what they are building.
+              Soch is a social media management agency led by Umair Shahzad, an award-winning LinkedIn creator and LinkedIn Top Voice, recognised globally in Venture Capital. We work with founders and senior executives who want their presence on LinkedIn, Instagram, X and TikTok to reflect the seriousness of what they are building.
             </p>
           </Reveal>
         </div>
@@ -175,7 +175,8 @@ export default function AboutPage() {
                 in institutional finance and construction, industries where a single
                 poorly placed post can damage relationships built over years. Soch grew
                 out of that work: founders kept asking for the same discipline on
-                Instagram, X and YouTube that we had already built for LinkedIn. That
+                Instagram, X, TikTok and YouTube that we had already built for
+                LinkedIn. That
                 experience shaped the Soch approach: positioning first, content
                 second, consistent across channels, always in your voice, always
                 pointed at a business outcome.

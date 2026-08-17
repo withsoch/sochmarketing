@@ -85,7 +85,7 @@ export default function ConfirmationPage() {
                     className="relative z-10 inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-mist text-[1rem] text-ink ring-1 ring-line"
                     style={{
                       fontFamily: "var(--font-display)",
-                      fontWeight: 560,
+                      fontWeight: 600,
                       fontVariantNumeric: "tabular-nums",
                     }}
                   >

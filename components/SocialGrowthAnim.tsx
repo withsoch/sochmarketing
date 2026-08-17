@@ -2,17 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { motion, useReducedMotion } from "motion/react";
-
-type Channel = "linkedin" | "instagram" | "x" | "tiktok" | "youtube" | "facebook";
-
-const CHANNEL_VAR: Record<Channel, string> = {
-  linkedin: "var(--color-channel-linkedin)",
-  instagram: "var(--color-channel-instagram)",
-  x: "var(--color-channel-x)",
-  tiktok: "var(--color-channel-tiktok)",
-  youtube: "var(--color-channel-youtube)",
-  facebook: "var(--color-channel-facebook)",
-};
+import { CHANNEL_VAR, type Channel } from "@/lib/channels";
 
 function ChannelDot({ channel }: { channel: Channel }) {
   return (

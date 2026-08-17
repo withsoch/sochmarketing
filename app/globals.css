@@ -2,7 +2,7 @@
 
 /* ------------------------------------------------------------------ */
 /*  Soch - Design System (shared with Soch Catalyst)                  */
-/*  Editorial serif headlines · warm cream · flat orange · forest CTA */
+/*  Geometric sans headlines · warm cream · flat orange · forest CTA  */
 /* ------------------------------------------------------------------ */
 
 @theme {
@@ -44,7 +44,7 @@
 
   /* Fonts */
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-fraunces), Georgia, "Times New Roman", serif;
+  --font-display: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
 
   /* Shadows - subtle, HubSpot uses borders not big shadows */
   --shadow-soft: 0 1px 2px rgba(20, 30, 25, 0.04);
@@ -71,9 +71,9 @@
   h1, h2, h3, h4 {
     font-family: var(--font-display);
     color: var(--color-ink);
-    font-weight: 540;
-    letter-spacing: -0.012em;
-    line-height: 1.08;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    line-height: 1.14;
     text-wrap: balance;
   }
 
@@ -92,23 +92,24 @@
 }
 
 @layer components {
-  /* Fluid editorial display scale (serif) */
+  /* Fluid display scale. Tracking/leading are tuned for Poppins - a geometric
+     sans sets wider and taller than the serif this scale was first drawn for. */
   .text-display {
     font-size: clamp(2.7rem, 1.5rem + 4.4vw, 4.7rem);
-    line-height: 1.02;
-    letter-spacing: -0.018em;
-    font-weight: 540;
+    line-height: 1.08;
+    letter-spacing: -0.028em;
+    font-weight: 500;
   }
   .text-h2 {
     font-size: clamp(2.05rem, 1.4rem + 2.3vw, 3.3rem);
-    line-height: 1.06;
-    letter-spacing: -0.014em;
-    font-weight: 540;
+    line-height: 1.12;
+    letter-spacing: -0.022em;
+    font-weight: 500;
   }
   .text-h3 {
     font-size: clamp(1.35rem, 1.15rem + 0.7vw, 1.7rem);
     line-height: 1.16;
-    font-weight: 560;
+    font-weight: 600;
   }
   .lead {
     font-size: clamp(1.075rem, 1rem + 0.4vw, 1.28rem);

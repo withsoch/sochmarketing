@@ -1,5 +1,6 @@
 import { Hero } from "@/components/Hero";
 import { LogoMarquee } from "@/components/LogoMarquee";
+import { PlatformStrip } from "@/components/PlatformStrip";
 import { Positioning } from "@/components/Positioning";
 import { ServicesGrid } from "@/components/ServicesGrid";
 import { HowWeWork } from "@/components/HowWeWork";
@@ -13,6 +14,7 @@ export default function Home() {
     <>
       <Hero />
       <Reveal><LogoMarquee /></Reveal>
+      <Reveal><PlatformStrip /></Reveal>
       <Reveal><Positioning /></Reveal>
       <Reveal><ServicesGrid /></Reveal>
       <Reveal><HowWeWork /></Reveal>

@@ -66,7 +66,8 @@ function ProfileVisual() {
 
             {/* channel-dot row */}
             <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 12 }}>
-              {["var(--color-channel-linkedin)", "var(--color-channel-instagram)", "var(--color-channel-x)", "var(--color-channel-youtube)"].map((c) => (
+              {/* the four primary platforms, matching the copy point beside this card */}
+              {["var(--color-channel-linkedin)", "var(--color-channel-instagram)", "var(--color-channel-x)", "var(--color-channel-tiktok)"].map((c) => (
                 <ChannelDot key={c} color={c} />
               ))}
               <span style={{ fontSize: 10, color: "#6b6560" }}>4 channels, one story</span>
