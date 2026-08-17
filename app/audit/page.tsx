@@ -15,7 +15,7 @@ import {
 export const metadata: Metadata = {
   title: "Get a Free Social Audit",
   description:
-    "Request a free social media audit. We review your profiles, content and community across every channel and send back a prioritised plan of the moves that will get you the most return. No ads, no SEO.",
+    "Request a free social media audit. We review your profiles, content and community on LinkedIn, Instagram, X, TikTok and more, then send back a prioritised plan of the moves that will get you the most return. No ads, no SEO.",
 };
 
 const HERO_FACTS = [
@@ -146,7 +146,7 @@ export default function AuditPage() {
                   className="relative z-10 inline-flex h-10 w-10 items-center justify-center rounded-full bg-white text-[0.9rem] text-ink ring-1 ring-line"
                   style={{
                     fontFamily: "var(--font-display)",
-                    fontWeight: 560,
+                    fontWeight: 600,
                     fontVariantNumeric: "tabular-nums",
                   }}
                 >

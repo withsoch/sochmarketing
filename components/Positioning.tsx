@@ -29,10 +29,10 @@ export function Positioning() {
             Most social agencies sell posts. We build the system behind them.
           </h2>
           <p className="lead mt-5">
-            Your buyers are already scrolling somewhere. We handle the branding,
-            content and community across every channel that matters, so your
-            presence brings you work instead of wasting your time, without a
-            dollar spent on ads.
+            Your buyers are already scrolling — LinkedIn, Instagram, X, TikTok.
+            We handle the branding, content and community on the platforms they
+            actually use, so your presence brings you work instead of wasting
+            your time, without a dollar spent on ads.
           </p>
         </Reveal>
 

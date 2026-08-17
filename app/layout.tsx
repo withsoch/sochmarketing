@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Fraunces } from "next/font/google";
+import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -13,9 +13,10 @@ const inter = Inter({
   display: "swap",
 });
 
-// Editorial serif for headlines - the brand voice shared with Soch Catalyst.
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
+// Geometric sans for headlines and the wordmark. Poppins is not a variable
+// font on Google Fonts, so every weight we use has to be requested explicitly.
+const poppins = Poppins({
+  variable: "--font-poppins",
   subsets: ["latin"],
   weight: ["400", "500", "600"],
   style: ["normal", "italic"],
@@ -32,18 +33,22 @@ export const metadata: Metadata = {
     template: "%s · Soch",
   },
   description:
-    "Soch is an organic social media management agency for B2B founders and senior executives. We run your profile, content and community across every channel that matters — no paid ads, no SEO.",
+    "Soch is an organic social media management agency for B2B founders and senior executives. We run your profile, content and community on LinkedIn, Instagram, X and TikTok — no paid ads, no SEO.",
   keywords: [
     "social media management agency",
     "organic social media growth",
     "personal branding for founders",
     "multi-channel content strategy",
-    "LinkedIn Instagram X content management",
+    "LinkedIn management for founders",
+    "Instagram management for founders",
+    "X (Twitter) content management",
+    "TikTok management for founders",
+    "YouTube and Facebook content management",
   ],
   openGraph: {
     title: "Soch: Social Media Management for Founders & CEOs",
     description:
-      "Soch is an organic social media management agency for B2B founders and senior executives. We run your profile, content and community across every channel that matters — no paid ads, no SEO.",
+      "Soch is an organic social media management agency for B2B founders and senior executives. We run your profile, content and community on LinkedIn, Instagram, X and TikTok — no paid ads, no SEO.",
     url: SITE_URL,
     siteName: "Soch",
     type: "website",
@@ -52,7 +57,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Soch: Social Media Management for Founders & CEOs",
     description:
-      "Soch is an organic social media management agency for B2B founders and senior executives. We run your profile, content and community across every channel that matters — no paid ads, no SEO.",
+      "Soch is an organic social media management agency for B2B founders and senior executives. We run your profile, content and community on LinkedIn, Instagram, X and TikTok — no paid ads, no SEO.",
   },
 };
 
@@ -64,7 +69,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${fraunces.variable} h-full antialiased`}
+      className={`${inter.variable} ${poppins.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col overflow-x-hidden bg-white">
         <AuditModalProvider>

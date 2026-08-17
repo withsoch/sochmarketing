@@ -31,7 +31,7 @@ export function AuditReportVisual() {
             </p>
             <p
               className="mt-1.5 text-[1.15rem] leading-tight text-ink"
-              style={{ fontFamily: "var(--font-display)", fontWeight: 560 }}
+              style={{ fontFamily: "var(--font-display)", fontWeight: 600 }}
             >
               Prepared for you
             </p>
@@ -121,7 +121,7 @@ export function AuditReportVisual() {
             <p className="text-[0.6rem] leading-tight text-muted">Reach on the table</p>
             <p
               className="mt-0.5 text-[1.05rem] leading-none text-leaf"
-              style={{ fontFamily: "var(--font-display)", fontWeight: 560 }}
+              style={{ fontFamily: "var(--font-display)", fontWeight: 600 }}
             >
               3.4&times;
             </p>

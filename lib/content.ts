@@ -15,7 +15,7 @@ export const HERO = {
 export const SITE = {
   name: "Soch",
   tagline:
-    "Organic social media management for B2B founders and CEOs, across every channel that matters.",
+    "Organic social media management for B2B founders and CEOs on LinkedIn, Instagram, X, TikTok and beyond.",
   // Placeholder contact details — replace before launch.
   email: "hello@soch.co",
   linkedin: "https://www.linkedin.com/company/soch/",
@@ -66,7 +66,7 @@ export const SERVICES: Service[] = [
     description:
       "A founder checks your LinkedIn, then your Instagram, then your X bio, before they ever reply. If those don't agree on who you are, you lose them. We rebuild your profile, bio, and pinned content across every channel you use so visitors instantly understand what you stand for and who you serve.",
     points: [
-      "Consistent positioning across LinkedIn, Instagram, X & more",
+      "Consistent positioning across LinkedIn, Instagram, X & TikTok",
       "Bio, headline & link-in-bio rebuilt for conversion",
       "Featured/pinned content that routes to your offer",
     ],
@@ -77,7 +77,7 @@ export const SERVICES: Service[] = [
     title: "Content Writing & Production",
     hook: "Show up everywhere, without writing or filming a thing yourself.",
     description:
-      "You have opinions and expertise worth sharing. You don't have time to turn that into consistent posts, carousels, and short-form video across five platforms. We run a monthly interview, write and produce in your voice, build the cross-channel calendar, and publish. You spend under two hours a month.",
+      "You have opinions and expertise worth sharing. You don't have time to turn that into consistent posts, carousels, and short-form video for LinkedIn, Instagram, X and TikTok at once. We run a monthly interview, write and produce in your voice, build the cross-channel calendar, and publish. You spend under two hours a month.",
     points: [
       "Founder-voice writing for text, carousel & short-form video",
       "One interview, content repurposed across every channel",
@@ -177,7 +177,7 @@ export const STEPS: Step[] = [
 ];
 
 export const STATS = [
-  { value: "5+", label: "Channels managed under one strategy" },
+  { value: "6", label: "Platforms managed under one strategy" },
   { value: "10-20", label: "Qualified conversations / month" },
   { value: "40+", label: "Founders & execs we work with" },
   { value: "0", label: "Dollars spent on paid ads, ever" },
@@ -379,7 +379,7 @@ export const AUDIT_FAQS = [
   },
   {
     q: "Which platforms do you audit?",
-    a: "LinkedIn, Instagram, X, YouTube, TikTok and Facebook. Most founders send us LinkedIn plus one other channel. Send whichever ones you are actually trying to grow.",
+    a: "LinkedIn, Instagram, X and TikTok, plus YouTube and Facebook. Most founders send us two or three. Send whichever ones you are actually trying to grow.",
   },
 ];
 
@@ -429,7 +429,7 @@ export const FAQS = [
   },
   {
     q: "Which platforms do you cover?",
-    a: "It depends on where your buyers actually are. Most B2B founders we work with focus on LinkedIn plus one or two of Instagram, X, YouTube Shorts, TikTok or Facebook. We help you decide the right mix rather than spreading you thin across all of them.",
+    a: "We run LinkedIn, Instagram, X and TikTok, plus YouTube and Facebook. Which of those you should be on depends on where your buyers actually are — most founders we work with pick two or three. We help you decide the right mix rather than spreading you thin across all of them.",
   },
   {
     q: "Whose voice is the content in?",

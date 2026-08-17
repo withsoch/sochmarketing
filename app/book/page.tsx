@@ -34,7 +34,7 @@ export default function BookPage() {
             <span className="text-gradient">invisible to in-demand.</span>
           </>
         }
-        intro="Book a free 30-minute call. We look at where you are now, show you what's possible across every channel that matters, and give you a clear plan. Take it and run, or take it with us."
+        intro="Book a free 30-minute call. We look at where you are now, show you what's possible on LinkedIn, Instagram, X and TikTok, and give you a clear plan. Take it and run, or take it with us."
       />
 
       <section className="bg-white py-16 sm:py-20 lg:py-24">

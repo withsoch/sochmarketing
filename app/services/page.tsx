@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 const FACTS = [
   { value: "6", label: "Services, run as one system" },
-  { value: "5+", label: "Channels under one strategy" },
+  { value: "6", label: "Platforms under one strategy" },
   { value: "0", label: "Dollars spent on ads, ever" },
 ];
 
@@ -40,8 +40,8 @@ export default function ServicesPage() {
               <Reveal delay={0.1}>
                 <p className="lead mt-5">
                   Every service below is built around one goal: making you the
-                  most credible voice in your space, on the channels your buyers
-                  actually use. No ads, no SEO, just organic growth.
+                  most credible voice in your space, on LinkedIn, Instagram, X
+                  and TikTok. No ads, no SEO, just organic growth.
                 </p>
               </Reveal>
 
@@ -61,7 +61,7 @@ export default function ServicesPage() {
                       <dd>
                         <span
                           className="block text-[1.75rem] leading-none text-ink"
-                          style={{ fontFamily: "var(--font-display)", fontWeight: 540 }}
+                          style={{ fontFamily: "var(--font-display)", fontWeight: 500 }}
                         >
                           {f.value}
                         </span>

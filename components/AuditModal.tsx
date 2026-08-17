@@ -186,7 +186,7 @@ export function AuditModal() {
                   <input
                     id="audit-channel-url"
                     type="url"
-                    placeholder="LinkedIn, Instagram, X — paste a link"
+                    placeholder="LinkedIn, Instagram, X, TikTok — paste a link"
                     value={form.channelUrl}
                     onChange={(e) => {
                       setForm((f) => ({ ...f, channelUrl: e.target.value }));

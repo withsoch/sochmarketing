@@ -20,7 +20,7 @@ export function Hero() {
 
           <p className="lead text-[clamp(0.95rem,0.88rem+0.28vw,1.1rem)] mt-5 animate-fade-up [animation-delay:160ms]">
             Soch is an organic social media agency for founders and senior executives. We
-            run your profile, content and community across every channel that matters,
+            run your profile, content and community on LinkedIn, Instagram, X and TikTok,
             so you get inbound, booked calls, and a name people trust. No ads, no SEO,
             just consistent, credible presence.
           </p>
