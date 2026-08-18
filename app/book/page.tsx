@@ -6,15 +6,15 @@ import { Icon } from "@/components/Icons";
 import { Reveal } from "@/components/ui/Reveal";
 
 export const metadata: Metadata = {
-  title: "Book a Discovery Call",
+  title: "Get a Quote",
   description:
-    "Book a free 30-minute discovery call. We show you where your social channels are leaking opportunity and how to turn them into booked calls. No pitch, just a plan.",
+    "Get a quote for your restaurant, cafe or shisha lounge. We show you where your venue is losing visibility and how to turn it into more orders. No pitch, just a plan.",
 };
 
 const EXPECT = [
-  "A clear read on where your channels are leaking opportunity today",
-  "The position that would make you the obvious choice in your space",
-  "Which channels and services will get you results fastest, for your goals",
+  "A clear read on where your venue is losing visibility today",
+  "Which package fits your venue, and why, even if it's the cheapest one",
+  "Which platforms and services will get you results fastest, for your goals",
   "A straight recommendation, no pressure. Work with us, or take the plan and run",
 ];
 
@@ -31,10 +31,10 @@ export default function BookPage() {
         title={
           <>
             Let&apos;s map your path from{" "}
-            <span className="text-gradient">invisible to in-demand.</span>
+            <span className="text-gradient">overlooked to fully booked.</span>
           </>
         }
-        intro="Book a free 30-minute call. We look at where you are now, show you what's possible on LinkedIn, Instagram, X and TikTok, and give you a clear plan. Take it and run, or take it with us."
+        intro="Get a quote in a free 30-minute call. We look at where your venue is now, show you what's possible on Instagram, Google and your delivery apps, and give you a clear plan. Take it and run, or take it with us."
       />
 
       <section className="bg-white py-16 sm:py-20 lg:py-24">
@@ -72,9 +72,9 @@ export default function BookPage() {
             <div className="mt-10 rounded-2xl border border-line bg-cream p-6">
               <p className="text-sm font-semibold text-ink">Who it&apos;s for</p>
               <p className="mt-2 text-sm leading-relaxed text-slate">
-                Founders and senior executives who want their social channels to build
-                authority and bring in booked calls, without turning into a full-time
-                content creator.
+                Restaurant, cafe and shisha lounge owners who want to look
+                active, get found on Google, and turn that into more orders,
+                without becoming a full-time content creator themselves.
               </p>
             </div>
           </Reveal>
@@ -82,10 +82,10 @@ export default function BookPage() {
           <Reveal delay={0.2}>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <BookButton variant="primary" size="lg">
-                Book a Discovery Call
+                Get a quote
               </BookButton>
               <AuditButton variant="secondary" size="lg" className="!ring-brand !text-brand hover:!ring-brand-dark hover:!text-brand-dark">
-                Get a Free Social Audit
+                Get a Free Venue Audit
               </AuditButton>
             </div>
           </Reveal>

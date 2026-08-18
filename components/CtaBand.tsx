@@ -2,8 +2,8 @@ import { BookButton } from "@/components/BookButton";
 import { CTAS } from "@/lib/content";
 
 export function CtaBand({
-  title = "Turn your social presence into booked calls",
-  subtitle = "Book a free discovery call. We will show you where your channels are leaking opportunity and how to fix it, without a dollar spent on ads. No obligation, no pitch.",
+  title = "Turn your online presence into more orders",
+  subtitle = "Get a quote. We will show you where your venue is losing visibility, on Google, Instagram or your delivery listings, and how to fix it. No obligation, no pitch.",
 }: {
   title?: string;
   subtitle?: string;

@@ -9,7 +9,7 @@ import { CONFIRMATION_FAQS, CONFIRMATION_STEPS, NAV, SITE } from "@/lib/content"
 export const metadata: Metadata = {
   title: "Audit Submitted",
   description:
-    "Your profiles are with us. Umair will review them personally and send you the full breakdown within 24 hours.",
+    "Your profiles are with us. Our team will review them personally and send you the full breakdown within 24 hours.",
   robots: { index: false, follow: false },
 };
 
@@ -31,7 +31,7 @@ export default function ConfirmationPage() {
                 <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-leaf text-white">
                   <Icon name="check" className="h-3.5 w-3.5" strokeWidth={3} />
                 </span>
-                Social audit received
+                Venue audit received
               </span>
 
               <h1 className="text-display mt-6 text-[clamp(2.1rem,1.4rem+2.6vw,3.2rem)] text-white">
@@ -48,7 +48,7 @@ export default function ConfirmationPage() {
               <p className="text-[0.8rem] text-white/55">Don&apos;t want to wait?</p>
               <div className="mt-3">
                 <BookButton variant="primary" size="lg" arrow>
-                  Book your strategy call
+                  Get a quote now
                 </BookButton>
               </div>
             </div>
@@ -112,10 +112,10 @@ export default function ConfirmationPage() {
                 </p>
                 <figcaption className="mt-4 flex items-center gap-3 border-t border-dashed border-line pt-4">
                   <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-brand text-xs font-bold text-white">
-                    US
+                    S
                   </span>
                   <span className="text-[0.8rem] leading-tight text-slate">
-                    <span className="block font-semibold text-ink">Umair Shahzad</span>
+                    <span className="block font-semibold text-ink">The Soch team</span>
                     Nothing back in 24 hours?{" "}
                     <a
                       href={`mailto:${SITE.email}`}
@@ -132,7 +132,7 @@ export default function ConfirmationPage() {
           {/* sidebar */}
           <Reveal delay={0.1} className="lg:sticky lg:top-28 lg:self-start">
             <div className="rounded-2xl border border-line bg-white p-7 shadow-[var(--shadow-card)]">
-              <h2 className="text-h3">Move faster: take the strategy call</h2>
+              <h2 className="text-h3">Move faster: get a quote</h2>
               <p className="mt-2.5 text-[0.925rem] leading-relaxed text-slate">
                 The call is in your email too, but the calendar is open now. Thirty
                 minutes, no pitch.
@@ -155,7 +155,7 @@ export default function ConfirmationPage() {
 
               <div className="mt-7">
                 <BookButton variant="primary" size="lg" className="w-full">
-                  Book a Discovery Call
+                  Get a quote
                 </BookButton>
               </div>
             </div>

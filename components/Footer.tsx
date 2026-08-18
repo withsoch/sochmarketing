@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Logo } from "@/components/Logo";
 import { Icon } from "@/components/Icons";
-import { NAV, SERVICES, SITE } from "@/lib/content";
+import { NAV, SERVICE_CATEGORIES, SITE } from "@/lib/content";
 import { PLATFORMS } from "@/lib/channels";
 import { AuditFooterLink } from "@/components/AuditFooterLink";
 import { BookFooterLink } from "@/components/BookFooterLink";
@@ -28,9 +28,9 @@ export function Footer() {
           </FooterCol>
 
           <FooterCol title="Services">
-            {SERVICES.slice(0, 5).map((s) => (
-              <FooterLink key={s.slug} href={`/services#${s.slug}`}>
-                {s.title}
+            {SERVICE_CATEGORIES.map((c) => (
+              <FooterLink key={c.slug} href={`/services#${c.slug}`}>
+                {c.name}
               </FooterLink>
             ))}
           </FooterCol>
