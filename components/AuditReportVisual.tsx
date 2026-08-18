@@ -8,15 +8,15 @@ import { Icon } from "@/components/Icons";
  */
 
 const CHANNELS = [
-  { name: "LinkedIn", color: "var(--color-channel-linkedin)", score: 72, note: "Strong, under-used" },
-  { name: "Instagram", color: "var(--color-channel-instagram)", score: 34, note: "Bio leaks visitors" },
-  { name: "X", color: "var(--color-channel-x)", score: 51, note: "No pinned offer" },
+  { name: "Google", color: "var(--color-channel-google)", score: 38, note: "Listing incomplete" },
+  { name: "Instagram", color: "var(--color-channel-instagram)", score: 61, note: "Posting, but inconsistent" },
+  { name: "Delivery apps", color: "var(--color-channel-wolt)", score: 45, note: "Photos missing on most dishes" },
 ];
 
 const FIXES = [
-  { label: "Rewrite the headline around the buyer, not the title", weight: "High impact" },
-  { label: "Pin the case study, route it to the audit offer", weight: "High impact" },
-  { label: "Cut posting from 5 to 3 channels for 90 days", weight: "Medium" },
+  { label: "Claim and fully build the Google Business Profile", weight: "High impact" },
+  { label: "Add a photo to every dish on the delivery listing", weight: "High impact" },
+  { label: "Answer the backlog of unreplied Google reviews", weight: "Medium" },
 ];
 
 export function AuditReportVisual() {
@@ -27,7 +27,7 @@ export function AuditReportVisual() {
         <div className="flex items-start justify-between gap-4">
           <div>
             <p className="text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-muted">
-              Social growth audit &middot; sample
+              Venue audit &middot; sample
             </p>
             <p
               className="mt-1.5 text-[1.15rem] leading-tight text-ink"
@@ -108,11 +108,11 @@ export function AuditReportVisual() {
         <div className="mt-5 flex items-end justify-between gap-4 border-t border-line pt-4">
           <div className="flex items-center gap-2.5">
             <span className="inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-forest text-[0.6rem] font-bold text-white">
-              US
+              S
             </span>
             <p className="text-[0.7rem] leading-tight text-muted">
               Read and written by{" "}
-              <span className="font-semibold text-ink">Umair Shahzad</span>
+              <span className="font-semibold text-ink">the Soch team</span>
               <br />
               Never a scoring tool
             </p>

@@ -9,7 +9,7 @@ export function BookFooterLink() {
         rel="noopener noreferrer"
         className="text-sm text-white/60 transition-colors hover:text-brand-light"
       >
-        Book a discovery call
+        Get a quote
       </a>
     </li>
   );

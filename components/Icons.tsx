@@ -17,7 +17,12 @@ export type IconName =
   | "close"
   | "shield"
   | "clock"
-  | "chat";
+  | "chat"
+  | "pin"
+  | "star"
+  | "image"
+  | "bag"
+  | "globe";
 
 const base: SVGProps<SVGSVGElement> = {
   viewBox: "0 0 24 24",
@@ -118,6 +123,38 @@ const PATHS: Record<IconName, React.ReactNode> = {
   chat: (
     <>
       <path d="M4.5 6.5A1.5 1.5 0 0 1 6 5h12a1.5 1.5 0 0 1 1.5 1.5v8A1.5 1.5 0 0 1 18 16H9l-4 3v-3H6a1.5 1.5 0 0 1-1.5-1.5Z" />
+    </>
+  ),
+  pin: (
+    <>
+      <path d="M12 21.5S5 15.4 5 10a7 7 0 0 1 14 0c0 5.4-7 11.5-7 11.5Z" />
+      <circle cx="12" cy="10" r="2.6" />
+    </>
+  ),
+  star: (
+    <path
+      d="M12 3.5l2.6 5.6 6 .7-4.4 4.2 1.2 6-5.4-3-5.4 3 1.2-6-4.4-4.2 6-.7L12 3.5Z"
+      fill="currentColor"
+      stroke="none"
+    />
+  ),
+  image: (
+    <>
+      <rect x="3.5" y="4.5" width="17" height="15" rx="2" />
+      <circle cx="9" cy="10" r="1.7" />
+      <path d="M4.5 16.5l4.7-4.7a1.5 1.5 0 0 1 2.1 0l2.4 2.4M14 14.1l1.1-1.1a1.5 1.5 0 0 1 2.1 0l2.3 2.3" />
+    </>
+  ),
+  bag: (
+    <>
+      <path d="M6 8h12l-1 12.5H7L6 8Z" />
+      <path d="M9 8V6.5a3 3 0 0 1 6 0V8" />
+    </>
+  ),
+  globe: (
+    <>
+      <circle cx="12" cy="12" r="8.5" />
+      <path d="M3.5 12h17M12 3.5c2.4 2.3 3.6 5.2 3.6 8.5s-1.2 6.2-3.6 8.5c-2.4-2.3-3.6-5.2-3.6-8.5S9.6 5.8 12 3.5Z" />
     </>
   ),
 };

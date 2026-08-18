@@ -6,15 +6,15 @@ import { CtaBand } from "@/components/CtaBand";
 import { Reveal } from "@/components/ui/Reveal";
 
 export const metadata: Metadata = {
-  title: "Services: Organic Social Media Management, End to End",
+  title: "Services: Social, Google, Reviews & Delivery Marketing",
   description:
-    "Profile & bio optimisation, content production, community management, personal brand strategy, channel coaching and audits. The full Soch social media system for founders and senior executives. No ads, no SEO.",
+    "Instagram, TikTok and Facebook content, Google Business Profile management, review generation, AI-produced photos and video, one-page websites, Wolt & Bolt Food listings, and ad management. The full Soch system for restaurants, cafes and shisha lounges in Tallinn.",
 };
 
 const FACTS = [
-  { value: "6", label: "Services, run as one system" },
-  { value: "6", label: "Platforms under one strategy" },
-  { value: "0", label: "Dollars spent on ads, ever" },
+  { value: "24", label: "Services, across 7 categories" },
+  { value: "7", label: "Categories, run as one system" },
+  { value: "6", label: "Platforms & apps under one plan" },
 ];
 
 export default function ServicesPage() {
@@ -30,7 +30,7 @@ export default function ServicesPage() {
 
               <Reveal delay={0.05}>
                 <h1 className="text-display mt-5 text-[clamp(2.3rem,1.4rem+3vw,3.6rem)]">
-                  Everything your social presence needs.{" "}
+                  Everything your venue needs online.{" "}
                   <span className="italic text-brand">
                     Take the system, or one piece of it.
                   </span>
@@ -39,16 +39,17 @@ export default function ServicesPage() {
 
               <Reveal delay={0.1}>
                 <p className="lead mt-5">
-                  Every service below is built around one goal: making you the
-                  most credible voice in your space, on LinkedIn, Instagram, X
-                  and TikTok. No ads, no SEO, just organic growth.
+                  Every service below is built around one goal: making your
+                  restaurant, cafe or lounge easy to find and worth ordering
+                  from, on Instagram, Google, TikTok, Facebook and delivery
+                  apps.
                 </p>
               </Reveal>
 
               <Reveal delay={0.15}>
                 <div className="mt-8">
                   <BookButton variant="primary" size="lg" arrow>
-                    Book a Discovery Call
+                    Get a quote
                   </BookButton>
                 </div>
               </Reveal>
@@ -86,7 +87,7 @@ export default function ServicesPage() {
 
       <CtaBand
         title="Not sure which piece you need"
-        subtitle="Book a free discovery call. We will look at your channels, tell you which of these services would move the needle first, and be straight with you if the answer is none of them yet."
+        subtitle="Get a quote. We will look at your venue, tell you which of these services would move the needle first, and be straight with you if the answer is none of them yet."
       />
     </>
   );

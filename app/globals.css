@@ -35,12 +35,12 @@
   /* Small channel-dot badges only (never structural UI color) - used to tag
      which platform a piece of content belongs to across the multi-channel
      positioning (content calendar chips, notification chips, etc). */
-  --color-channel-linkedin: #0a66c2;
   --color-channel-instagram: #c23fc2;
-  --color-channel-x: #171717;
-  --color-channel-tiktok: #1a1a1a;
-  --color-channel-youtube: #d0342c;
   --color-channel-facebook: #1877f2;
+  --color-channel-tiktok: #1a1a1a;
+  --color-channel-google: #4285f4;
+  --color-channel-wolt: #009de0;
+  --color-channel-bolt: #34d1a4;
 
   /* Fonts */
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;

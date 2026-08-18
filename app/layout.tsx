@@ -29,35 +29,35 @@ const SITE_URL = "https://soch.co";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Soch: Social Media Management for Founders & CEOs",
+    default: "Soch: Marketing for Restaurants, Cafes & Lounges",
     template: "%s · Soch",
   },
   description:
-    "Soch is an organic social media management agency for B2B founders and senior executives. We run your profile, content and community on LinkedIn, Instagram, X and TikTok — no paid ads, no SEO.",
+    "Soch runs the marketing for restaurants, cafes and shisha lounges: Instagram and Facebook content, Google Business Profile, review replies, Wolt & Bolt Food listings and ads. Packages from €290/month, starting in Tallinn.",
   keywords: [
-    "social media management agency",
-    "organic social media growth",
-    "personal branding for founders",
-    "multi-channel content strategy",
-    "LinkedIn management for founders",
-    "Instagram management for founders",
-    "X (Twitter) content management",
-    "TikTok management for founders",
-    "YouTube and Facebook content management",
+    "restaurant marketing agency",
+    "cafe social media management",
+    "shisha lounge marketing",
+    "Google Business Profile management",
+    "restaurant review management",
+    "Instagram management for restaurants",
+    "Wolt listing management",
+    "Bolt Food listing management",
+    "restaurant marketing Tallinn",
   ],
   openGraph: {
-    title: "Soch: Social Media Management for Founders & CEOs",
+    title: "Soch: Marketing for Restaurants, Cafes & Lounges",
     description:
-      "Soch is an organic social media management agency for B2B founders and senior executives. We run your profile, content and community on LinkedIn, Instagram, X and TikTok — no paid ads, no SEO.",
+      "Soch runs the marketing for restaurants, cafes and shisha lounges: Instagram and Facebook content, Google Business Profile, review replies, Wolt & Bolt Food listings and ads. Packages from €290/month, starting in Tallinn.",
     url: SITE_URL,
     siteName: "Soch",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Soch: Social Media Management for Founders & CEOs",
+    title: "Soch: Marketing for Restaurants, Cafes & Lounges",
     description:
-      "Soch is an organic social media management agency for B2B founders and senior executives. We run your profile, content and community on LinkedIn, Instagram, X and TikTok — no paid ads, no SEO.",
+      "Soch runs the marketing for restaurants, cafes and shisha lounges: Instagram and Facebook content, Google Business Profile, review replies, Wolt & Bolt Food listings and ads. Packages from €290/month, starting in Tallinn.",
   },
 };
 

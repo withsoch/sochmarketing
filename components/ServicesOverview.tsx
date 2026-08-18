@@ -1,9 +1,9 @@
 import { Icon } from "@/components/Icons";
 import { AuditButton } from "@/components/AuditButton";
-import { SERVICES } from "@/lib/content";
+import { SERVICE_CATEGORIES } from "@/lib/content";
 
 /**
- * The /services hero visual: an editorial index of the six services rather
+ * The /services hero visual: an editorial index of the categories rather
  * than a decorative diagram. It tells you what is on the page and takes you
  * straight to any of it — a table of contents, in the brand's serif idiom.
  */
@@ -15,15 +15,15 @@ export function ServicesOverview() {
           On this page
         </p>
         <p className="text-[0.7rem] font-medium text-muted">
-          {SERVICES.length} services
+          {SERVICE_CATEGORIES.length} categories
         </p>
       </div>
 
       <ul className="border-t border-line">
-        {SERVICES.map((s, i) => (
-          <li key={s.slug} className="border-b border-line last:border-b-0">
+        {SERVICE_CATEGORIES.map((c, i) => (
+          <li key={c.slug} className="border-b border-line last:border-b-0">
             <a
-              href={`#${s.slug}`}
+              href={`#${c.slug}`}
               className="group flex items-center gap-4 px-6 py-3.5 transition-colors hover:bg-mist sm:px-7"
             >
               <span
@@ -33,7 +33,7 @@ export function ServicesOverview() {
                 {String(i + 1).padStart(2, "0")}
               </span>
               <span className="min-w-0 flex-1 text-[0.95rem] font-medium leading-snug text-ink-soft transition-colors group-hover:text-ink">
-                {s.title}
+                {c.name}
               </span>
               <Icon
                 name="arrow"
