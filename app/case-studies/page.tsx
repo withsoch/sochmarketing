@@ -6,9 +6,9 @@ import { AuditButton } from "@/components/AuditButton";
 import { CTAS, CASE_STUDIES } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Case Studies: Client Results | Soch",
+  title: "Case Studies: Venue Results | Soch",
   description:
-    "Illustrative results from Soch client engagements across multi-channel social strategy, personal branding, and community growth.",
+    "Illustrative results from Soch venue engagements: Google visibility, delivery listings, and review systems for restaurants, cafes and lounges.",
 };
 
 export default function CaseStudiesPage() {
@@ -23,9 +23,10 @@ export default function CaseStudiesPage() {
               Results that speak for themselves.
             </h1>
             <p className="lead mt-5 max-w-2xl text-muted">
-              A selection of illustrative client engagements across multi-channel social
-              strategy, community growth, and personal brand builds. These are
-              placeholder case studies for layout purposes: replace with real client
+              A selection of illustrative venue engagements: Google
+              visibility, delivery listings, and review systems for
+              restaurants, cafes and shisha lounges. These are placeholder
+              case studies for layout purposes. Replace with real venue
               results before launch.
             </p>
           </Reveal>

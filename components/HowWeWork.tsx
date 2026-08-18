@@ -9,10 +9,11 @@ export function HowWeWork() {
       <div className="container-x">
         <div className="flex flex-col items-start justify-between gap-6 lg:flex-row lg:items-end">
           <div className="max-w-2xl">
-            <h2 className="text-h2">Four steps. No guesswork.</h2>
+            <h2 className="text-h2">Four steps. Your time, stated upfront.</h2>
             <p className="lead mt-5">
-              We do the work and keep you in control. Here&apos;s how we get your
-              venue from overlooked to fully booked.
+              We do the work. You stay in control and spend under an hour a
+              month on it. Here&apos;s the whole process, and what each step
+              needs from you.
             </p>
           </div>
         </div>

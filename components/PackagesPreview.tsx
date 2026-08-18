@@ -12,9 +12,9 @@ export function PackagesPreview() {
           <div className="max-w-2xl">
             <h2 className="text-h2">Packages, starting from €290/month.</h2>
             <p className="lead mt-5">
-              Five packages built around one goal: look active, get found,
-              get more orders. All prices excl. VAT — see the full detail and
-              the two specialist tracks on the packages page.
+              Five packages, one goal: look open, get found, get more orders.
+              All prices excl. VAT. See the full detail and the two
+              specialist tracks on the packages page.
             </p>
           </div>
           <Button href="/packages" variant="dark" arrow className="shrink-0">

@@ -8,20 +8,20 @@ import { Reveal } from "@/components/ui/Reveal";
 export const metadata: Metadata = {
   title: "Get a Quote",
   description:
-    "Get a quote for your restaurant, cafe or shisha lounge. We show you where your venue is losing visibility and how to turn it into more orders. No pitch, just a plan.",
+    "Get a quote for your restaurant, cafe or shisha lounge. A free 30-minute call, no pitch, just a plan for where your venue is losing customers and how to fix it.",
 };
 
 const EXPECT = [
-  "A clear read on where your venue is losing visibility today",
-  "Which package fits your venue, and why, even if it's the cheapest one",
-  "Which platforms and services will get you results fastest, for your goals",
+  "A clear read on where your venue is losing customers today",
+  "Which package fits, and why, even if it's the cheapest one on the list",
+  "Which platforms would move the needle fastest for your venue specifically",
   "A straight recommendation, no pressure. Work with us, or take the plan and run",
 ];
 
 const META = [
   { icon: "clock" as const, label: "30 minutes" },
   { icon: "chat" as const, label: "No pitch, just a plan" },
-  { icon: "shield" as const, label: "100% free" },
+  { icon: "shield" as const, label: "Free, no card needed" },
 ];
 
 export default function BookPage() {
@@ -30,11 +30,11 @@ export default function BookPage() {
       <PageHero
         title={
           <>
-            Let&apos;s map your path from{" "}
-            <span className="text-gradient">overlooked to fully booked.</span>
+            From overlooked online to{" "}
+            <span className="text-gradient">actually fully booked.</span>
           </>
         }
-        intro="Get a quote in a free 30-minute call. We look at where your venue is now, show you what's possible on Instagram, Google and your delivery apps, and give you a clear plan. Take it and run, or take it with us."
+        intro="A free 30-minute call. We look at where your venue stands today on Instagram, Google and your delivery apps, and hand you a clear plan. Take it and run, or take it with us."
       />
 
       <section className="bg-white py-16 sm:py-20 lg:py-24">
@@ -54,7 +54,7 @@ export default function BookPage() {
           </Reveal>
 
           <Reveal delay={0}>
-            <h2 className="text-h2 mt-8">What you&apos;ll walk away with</h2>
+            <h2 className="text-h2 mt-8">What you walk away with</h2>
           </Reveal>
 
           <ul className="mt-6 space-y-4">
@@ -73,7 +73,7 @@ export default function BookPage() {
               <p className="text-sm font-semibold text-ink">Who it&apos;s for</p>
               <p className="mt-2 text-sm leading-relaxed text-slate">
                 Restaurant, cafe and shisha lounge owners who want to look
-                active, get found on Google, and turn that into more orders,
+                open, get found on Google, and turn that into more orders,
                 without becoming a full-time content creator themselves.
               </p>
             </div>

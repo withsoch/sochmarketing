@@ -3,7 +3,7 @@ import { Icon } from "@/components/Icons";
 import type { Package } from "@/lib/content";
 
 /**
- * A single package card — the only place a price appears on the public
+ * A single package card, the only place a price appears on the public
  * site. Growth (popular:true) gets a brand ring and a pill; specialist
  * packages (Delivery-Led, Full) are rendered wider by the caller, not here.
  */
@@ -60,7 +60,7 @@ export function PackageCard({ pkg, dark = false }: { pkg: Package; dark?: boolea
           <span className="ml-1.5 text-[0.9rem] font-medium">/month</span>
         </p>
         <p className={`mt-1.5 text-[0.8rem] ${tone.priceSub}`}>
-          + {pkg.setup} one-off setup{pkg.setupNote ? ` — ${pkg.setupNote}` : ""}
+          + {pkg.setup} one-off setup{pkg.setupNote ? ` (${pkg.setupNote})` : ""}
         </p>
         <p className={`mt-0.5 text-[0.75rem] font-medium ${tone.priceSub}`}>Starting from, excl. VAT</p>
       </div>

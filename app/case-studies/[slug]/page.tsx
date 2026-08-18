@@ -129,8 +129,8 @@ export default async function CaseStudyDetailPage({
             <div className="mx-auto max-w-2xl text-center">
               <h2 className="text-h2">Your results should be here next.</h2>
               <p className="lead mt-5 text-muted">
-                Book a discovery call. We will be straight with you about what is
-                achievable and how long it will take.
+                Get a quote. We&apos;ll be straight with you about what&apos;s
+                achievable for your venue and how long it takes.
               </p>
               <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
                 <BookButton variant="primary" size="lg">

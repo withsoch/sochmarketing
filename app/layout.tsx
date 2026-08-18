@@ -23,17 +23,17 @@ const poppins = Poppins({
   display: "swap",
 });
 
-// Placeholder domain — replace with the real one before launch.
+// Placeholder domain, replace with the real one before launch.
 const SITE_URL = "https://soch.co";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Soch: Marketing for Restaurants, Cafes & Lounges",
+    default: "Soch: Marketing for Restaurant, Cafe & Lounge Owners",
     template: "%s · Soch",
   },
   description:
-    "Soch runs the marketing for restaurants, cafes and shisha lounges: Instagram and Facebook content, Google Business Profile, review replies, Wolt & Bolt Food listings and ads. Packages from €290/month, starting in Tallinn.",
+    "We run Instagram, Google, review replies and your Wolt or Bolt Food listing, for restaurants, cafes and shisha lounges. You approve every post. Packages from €290/month, starting in Tallinn.",
   keywords: [
     "restaurant marketing agency",
     "cafe social media management",
@@ -46,18 +46,18 @@ export const metadata: Metadata = {
     "restaurant marketing Tallinn",
   ],
   openGraph: {
-    title: "Soch: Marketing for Restaurants, Cafes & Lounges",
+    title: "Soch: Marketing for Restaurant, Cafe & Lounge Owners",
     description:
-      "Soch runs the marketing for restaurants, cafes and shisha lounges: Instagram and Facebook content, Google Business Profile, review replies, Wolt & Bolt Food listings and ads. Packages from €290/month, starting in Tallinn.",
+      "We run Instagram, Google, review replies and your Wolt or Bolt Food listing, for restaurants, cafes and shisha lounges. You approve every post. Packages from €290/month, starting in Tallinn.",
     url: SITE_URL,
     siteName: "Soch",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Soch: Marketing for Restaurants, Cafes & Lounges",
+    title: "Soch: Marketing for Restaurant, Cafe & Lounge Owners",
     description:
-      "Soch runs the marketing for restaurants, cafes and shisha lounges: Instagram and Facebook content, Google Business Profile, review replies, Wolt & Bolt Food listings and ads. Packages from €290/month, starting in Tallinn.",
+      "We run Instagram, Google, review replies and your Wolt or Bolt Food listing, for restaurants, cafes and shisha lounges. You approve every post. Packages from €290/month, starting in Tallinn.",
   },
 };
 

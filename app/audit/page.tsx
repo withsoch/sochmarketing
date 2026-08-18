@@ -15,7 +15,7 @@ import {
 export const metadata: Metadata = {
   title: "Get a Free Venue Audit",
   description:
-    "Request a free venue audit. We review your Instagram, Google Business Profile and delivery listings, then send back a prioritised plan of the moves that will get you the most return.",
+    "Request a free venue audit. We review your Instagram, Google Business Profile and delivery listings by hand, then send back a plan of the moves worth making first.",
 };
 
 const HERO_FACTS = [
@@ -39,15 +39,15 @@ export default function AuditPage() {
 
               <Reveal delay={0.05}>
                 <h1 className="text-display mt-5 text-[clamp(2.2rem,1.3rem+3.2vw,3.6rem)]">
-                  See exactly what&apos;s holding your venue back online.
+                  See exactly what&apos;s keeping tables empty online.
                 </h1>
               </Reveal>
 
               <Reveal delay={0.1}>
                 <p className="lead mt-5">
-                  Send us your links. We read your Instagram, your Google
-                  listing and your delivery apps, by hand, then send back a
-                  written plan of what to fix first, in what order.
+                  Send us your links. A person reads your Instagram, your
+                  Google listing and your delivery apps by hand, then sends
+                  back a written plan of what to fix first.
                 </p>
               </Reveal>
 
@@ -96,7 +96,7 @@ export default function AuditPage() {
             <p className="lead mt-5">
               Four sections, written for your channels specifically. No score
               badge, no generic checklist, nothing you could have generated
-              yourself in thirty seconds.
+              yourself in thirty seconds on a scoring tool.
             </p>
           </Reveal>
 
@@ -129,7 +129,7 @@ export default function AuditPage() {
       <section className="border-y border-line bg-cream py-20 sm:py-24 lg:py-28">
         <div className="container-x">
           <Reveal className="max-w-2xl">
-            <h2 className="text-h2">Three steps, one of them yours.</h2>
+            <h2 className="text-h2">Three steps. One takes you a minute.</h2>
           </Reveal>
 
           <ol className="mt-14 grid gap-10 md:grid-cols-3 md:gap-8">
@@ -170,8 +170,8 @@ export default function AuditPage() {
               className="text-[1.45rem] leading-snug text-ink"
               style={{ fontFamily: "var(--font-display)", fontWeight: 500 }}
             >
-              Built for restaurants, cafes and shisha lounges, starting with a
-              pilot in Tallinn.
+              Built for restaurants, cafes and shisha lounges, starting with
+              a pilot in Tallinn.
             </p>
             <ul className="grid gap-x-8 gap-y-3.5 sm:grid-cols-2">
               {AUDIT_EXCLUSIONS.map((x) => (
@@ -192,7 +192,7 @@ export default function AuditPage() {
         <div className="container-x">
           <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
             <Reveal>
-              <h2 className="text-h2">Before you send it.</h2>
+              <h2 className="text-h2">Before you send your links.</h2>
               <p className="mt-5 text-[0.975rem] leading-relaxed text-slate">
                 Anything still unclear, email{" "}
                 <a
@@ -218,7 +218,7 @@ export default function AuditPage() {
 
       <CtaBand
         title="Prefer to talk it through first"
-        subtitle="Get a quote instead. Same honesty, live, and we can look at your venue together on the call."
+        subtitle="Get a quote instead. Same honesty, on a 30-minute call, and we look at your venue together while we're on it."
       />
     </>
   );

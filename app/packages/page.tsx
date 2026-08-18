@@ -7,9 +7,9 @@ import { Reveal } from "@/components/ui/Reveal";
 import { PACKAGES, PACKAGE_TERMS, PACKAGE_FINE_PRINT, PRICING_FAQS } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Packages & Pricing for Restaurants, Cafes & Lounges",
+  title: "Packages & Pricing for Restaurants & Cafes",
   description:
-    "Five packages for restaurants, cafes and shisha lounges in Tallinn, starting from €290/month excl. VAT. Social media, Google, reviews, delivery listings and ads — get a quote.",
+    "Five packages for restaurants, cafes and shisha lounges in Tallinn, starting from €290 a month excl. VAT. Social media, Google, reviews, delivery listings and ads. Get a quote.",
 };
 
 const CORE = PACKAGES.filter((p) => p.track === "core");
@@ -30,14 +30,14 @@ export default function PackagesPage() {
               <Reveal delay={0.05}>
                 <h1 className="text-display mt-5 text-[clamp(2.3rem,1.4rem+3vw,3.6rem)]">
                   Five packages.{" "}
-                  <span className="italic text-brand">One goal: more orders.</span>
+                  <span className="italic text-brand">One goal: more covers.</span>
                 </h1>
               </Reveal>
 
               <Reveal delay={0.1}>
                 <p className="lead mt-5">
                   Pick the package that matches where your venue is today.
-                  Every price below is a starting point — get a quote and
+                  Every price below is a starting point. Get a quote and
                   we&apos;ll confirm the exact fit for your venue.
                 </p>
               </Reveal>
@@ -117,7 +117,7 @@ export default function PackagesPage() {
           <Reveal className="max-w-2xl">
             <h2 className="text-h2">Start here.</h2>
             <p className="lead mt-5">
-              Essentials, Starter and Growth build on each other — pick the
+              Essentials, Starter and Growth build on each other. Pick the
               one that matches how much of your venue is online today.
             </p>
           </Reveal>
@@ -141,8 +141,8 @@ export default function PackagesPage() {
             <h2 className="text-h2">Two of these aren&apos;t a step up.</h2>
             <p className="lead mt-5">
               Delivery-Led and Full are different routes, not higher rungs on
-              the same ladder — built for venues with a specific shape of
-              business, not a bigger version of the same one.
+              the same ladder. Built for a specific shape of venue, not just
+              a bigger version of the same one.
             </p>
           </Reveal>
 
@@ -181,7 +181,7 @@ export default function PackagesPage() {
         <div className="container-x">
           <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
             <Reveal>
-              <h2 className="text-h2">Questions before you get a quote.</h2>
+              <h2 className="text-h2">Questions before you ask for a quote.</h2>
             </Reveal>
             <Reveal delay={0.1}>
               <Faq items={PRICING_FAQS} />
@@ -192,7 +192,7 @@ export default function PackagesPage() {
 
       <CtaBand
         title="Tell us about your venue and we'll quote it"
-        subtitle="Get a quote. We'll ask a few questions about your venue and recommend a package honestly, even if it's the cheapest one."
+        subtitle="Get a quote. We'll ask a few questions and recommend a package honestly, even when the honest answer is the cheapest one."
       />
     </>
   );

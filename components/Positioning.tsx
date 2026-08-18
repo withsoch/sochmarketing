@@ -4,35 +4,35 @@ import { Icon, type IconName } from "@/components/Icons";
 const PILLARS: { icon: IconName; title: string; body: string }[] = [
   {
     icon: "pin",
-    title: "Found on Google, first",
-    body: "Most people decide where to eat by searching nearby, not by scrolling. We build and run your Google Business Profile so you're the one they find, and every review gets a reply within 24 hours.",
+    title: "It's 7pm on a Tuesday and half the tables are empty",
+    body: "Meanwhile your Google listing still says you closed an hour ago. We claim it, fix the hours, and answer every review within 24 hours, so the next person searching nearby actually finds you open.",
   },
   {
     icon: "image",
-    title: "Look active, every week",
-    body: "A quiet feed reads as a closed venue. We keep Instagram, Facebook and TikTok posting on a real schedule, with photos and video produced for you, in Estonian and English.",
+    title: "You posted the specials board. Six people liked it.",
+    body: "Out of 340 followers. A feed that goes quiet for a week reads as a venue that might have closed. We keep Instagram, Facebook and TikTok posting on a real schedule, in Estonian and English, so it doesn't.",
   },
   {
     icon: "bag",
-    title: "Orders, not just likes",
-    body: "If you take delivery orders, your Wolt or Bolt Food listing is doing half your selling. We rebuild it properly and keep it current, so browsing turns into an order.",
+    title: "Wolt takes 30% of every order and shows three blurry photos",
+    body: "That listing is doing half your selling and it's dressed like an afterthought. We rebuild it properly, photo on every dish, best-sellers up top, so browsing turns into an order more often.",
   },
 ];
 
 export function Positioning() {
-  // Flat peach surface — the design system deliberately has no gradients.
+  // Flat peach surface, the design system deliberately has no gradients.
   return (
     <section className="bg-peach py-20 sm:py-24 lg:py-28">
       <div className="container-x">
         <Reveal className="max-w-3xl">
           <h2 className="text-h2">
-            Most agencies sell posts. We build the system behind them.
+            Your customers already picked where to eat. Not always you.
           </h2>
           <p className="lead mt-5">
-            Your customers are already deciding where to eat — on Google, on
-            Instagram, in the Wolt app. We handle the profile, the content and
-            the listings on the platforms they actually use, so your venue
-            looks active and easy to find.
+            They decided on Google, on Instagram, in the Wolt app, before
+            they ever walked past your door. We run the profile, the content
+            and the listings on those apps, so your venue looks open, active
+            and worth choosing.
           </p>
         </Reveal>
 
