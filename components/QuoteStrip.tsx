@@ -2,7 +2,7 @@ import { Reveal } from "@/components/ui/Reveal";
 import { TESTIMONIALS } from "@/lib/content";
 
 /**
- * Short quote cards from venue owners — a lighter, honest alternative to
+ * Short quote cards from venue owners, a lighter, honest alternative to
  * the case-study carousel (which stays tied to the placeholder B2B case
  * studies at /case-studies and isn't shown here).
  */
@@ -11,7 +11,7 @@ export function QuoteStrip() {
     <section className="py-20 sm:py-24 lg:py-28" style={{ backgroundColor: "#f9f9f9" }}>
       <div className="container-x">
         <Reveal className="max-w-2xl">
-          <h2 className="text-h2">Venues that stopped being invisible.</h2>
+          <h2 className="text-h2">Venues that stopped being hard to find.</h2>
         </Reveal>
 
         <div className="mt-12 grid gap-5 sm:grid-cols-3">

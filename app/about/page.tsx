@@ -8,29 +8,29 @@ import { Icon, type IconName } from "@/components/Icons";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Soch runs the marketing for restaurants, cafes and shisha lounges — Instagram, Google, reviews and delivery listings, starting with a pilot in Tallinn.",
+    "Soch runs Instagram, Google, reviews and delivery listings for restaurant, cafe and shisha lounge owners. Starting with a pilot in Tallinn.",
 };
 
 const VALUES: { icon: IconName; title: string; body: string }[] = [
   {
     icon: "shield",
     title: "Substance over shortcuts",
-    body: "Fake followers, review-bombing your own page, and boosted engagement pods are all shortcuts we don't take. Every account we run is built on real posts, real replies and a real Google listing, done properly, every week.",
+    body: "Fake followers, review-bombing your own page, boosted engagement pods. We don't take any of those shortcuts. Every account we run is real posts, real replies and a real Google listing, done properly, every week.",
   },
   {
     icon: "chat",
     title: "Your voice, in two languages",
-    body: "We learn how your venue talks, and write captions in Estonian and English so locals and visitors both feel spoken to. We never publish a template.",
+    body: "We learn how your venue talks and write captions in Estonian and English, so locals and visitors both feel spoken to. We never publish a template with your name swapped in.",
   },
   {
     icon: "target",
-    title: "Orders, not vanity",
-    body: "Follower counts show up in every report. They are context, not the goal. The goal is always a booked table, a delivery order, or someone walking in because your listing came up first.",
+    title: "Covers, not vanity",
+    body: "Follower counts show up in every report because they're useful context. They are not the goal. The goal is a booked table, a delivery order, or someone walking in because your listing came up first.",
   },
   {
     icon: "spark",
     title: "A small number of venues, done properly",
-    body: "We take a limited number of venues at a time, deliberately. If something isn't working — a package, a platform, a listing — we say so and change it, rather than letting it quietly underperform.",
+    body: "We take a limited number of venues at a time, on purpose. If something isn't working, a package, a platform, a listing, we say so and change it, rather than let it quietly underperform.",
   },
 ];
 
@@ -50,13 +50,13 @@ export default function AboutPage() {
             </Reveal>
             <Reveal delay={0.1}>
               <p className="lead mt-6 max-w-2xl">
-                Most marketing agencies serve everyone — SaaS, e-commerce,
-                consultants and restaurants — with the same generic playbook.
-                We built Soch around one kind of business: restaurants, cafes
-                and shisha lounges, starting with a pilot in Tallinn, because
-                a bar or grill needs its Google listing and its Wolt menu
-                handled properly, not a content calendar borrowed from a
-                software company.
+                Most marketing agencies serve everyone: software companies,
+                shops, consultants and restaurants, with the same generic
+                playbook. We built Soch around one kind of business.
+                Restaurants, cafes and shisha lounges, starting with a pilot
+                in Tallinn, because a grill or a lounge needs its Google
+                listing and its Wolt menu handled properly, not a content
+                calendar borrowed from a software company.
               </p>
             </Reveal>
             <Reveal delay={0.15}>
@@ -86,10 +86,10 @@ export default function AboutPage() {
               </p>
               <p>
                 The venues that fill up are not the ones posting the most.
-                They are the ones that are easy to find, that answer their
-                reviews the same day, and whose Wolt or Bolt Food listing
-                actually sells the menu. That doesn&apos;t come from a
-                content calendar alone. It comes from treating Google,
+                They&apos;re the ones that are easy to find, that answer
+                their reviews the same day, and whose Wolt or Bolt Food
+                listing actually sells the menu. That doesn&apos;t come from
+                a content calendar alone. It comes from treating Google,
                 reviews and delivery apps as seriously as the Instagram feed.
               </p>
               <p className="font-medium text-ink">
@@ -157,15 +157,18 @@ export default function AboutPage() {
             <h2 className="text-h2">Why we started in Tallinn.</h2>
             <p className="lead mt-5">
               We&apos;re piloting Soch with a limited number of restaurants,
-              cafes and shisha lounges in Tallinn before expanding further.
-              That means closer attention per venue while we prove the
-              system, not a generic rollout across a city we don&apos;t know.
+              cafes and shisha lounges in Tallinn before we take on more.
+              That means closer attention per venue while we prove this
+              works, not a rollout across a city we don&apos;t actually know.
             </p>
           </Reveal>
         </div>
       </section>
 
-      <CtaBand />
+      <CtaBand
+        title="Ready to stop looking closed"
+        subtitle="Get a quote. Thirty minutes, free, and we'll tell you honestly which package fits your venue, even if it's the cheapest one."
+      />
     </>
   );
 }

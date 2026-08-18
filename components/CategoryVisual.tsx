@@ -1,6 +1,6 @@
-// Bespoke, presentational mini-mockups - one per service category.
+// Custom, presentational mini-mockups - one per service category.
 // Same card idiom as the homepage Hero: white rounded-2xl cards, ring-1 ring-line,
-// soft lift shadow, and brand/channel/leaf accents. No stock photography —
+// soft lift shadow, and brand/channel/leaf accents. No stock photography,
 // every "photo" is a flat, CSS-drawn block, honest about being a mockup.
 import { Icon } from "@/components/Icons";
 
@@ -19,7 +19,7 @@ function ChannelDot({ color }: { color: string }) {
   return <span className="h-2 w-2 shrink-0 rounded-full" style={{ background: color }} />;
 }
 
-/** A flat, CSS-drawn stand-in for a food/venue photo — never a real image. */
+/** A flat, CSS-drawn stand-in for a food/venue photo, never a real image. */
 function PhotoBlock({
   tone = "var(--color-peach)",
   className = "",
@@ -141,7 +141,7 @@ function ReviewsVisual() {
             Owner response
           </p>
           <p className="mt-1.5 text-[0.75rem] leading-relaxed text-slate">
-            Thank you so much for coming back — see you again soon!
+            Thank you so much for coming back, see you again soon!
           </p>
         </div>
       </div>

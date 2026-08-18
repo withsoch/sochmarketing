@@ -9,14 +9,14 @@ import { CONFIRMATION_FAQS, CONFIRMATION_STEPS, NAV, SITE } from "@/lib/content"
 export const metadata: Metadata = {
   title: "Audit Submitted",
   description:
-    "Your profiles are with us. Our team will review them personally and send you the full breakdown within 24 hours.",
+    "Your profiles are with us. A person will review them and send the full breakdown to your inbox within 24 hours.",
   robots: { index: false, follow: false },
 };
 
 const CALL_COVERS = [
-  "We walk your audit findings together, line by line",
-  "You leave with the three moves worth making first",
-  "If we're not the right fit, we say so on the call",
+  "We go through your audit findings together, line by line",
+  "You leave knowing the three moves worth making first",
+  "If we're not the right fit, we'll say so on the call",
 ];
 
 export default function ConfirmationPage() {
@@ -38,9 +38,9 @@ export default function ConfirmationPage() {
                 Your profiles are with us.
               </h1>
               <p className="lead mt-4 text-white/70">
-                Nothing else is needed from you. The written breakdown lands in
-                your inbox within 24 hours — check spam if it hasn&apos;t arrived by
-                then.
+                Nothing else is needed from you. The written breakdown lands
+                in your inbox within 24 hours. Check spam if it hasn&apos;t
+                shown up by then.
               </p>
             </div>
 
@@ -107,8 +107,8 @@ export default function ConfirmationPage() {
                   className="text-[1.15rem] leading-snug text-ink"
                   style={{ fontFamily: "var(--font-display)", fontWeight: 500 }}
                 >
-                  Every submission is read by a person. Not a template, not a
-                  tool.
+                  Every submission is read by a person. Not a template, not
+                  a tool.
                 </p>
                 <figcaption className="mt-4 flex items-center gap-3 border-t border-dashed border-line pt-4">
                   <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-brand text-xs font-bold text-white">
@@ -134,8 +134,8 @@ export default function ConfirmationPage() {
             <div className="rounded-2xl border border-line bg-white p-7 shadow-[var(--shadow-card)]">
               <h2 className="text-h3">Move faster: get a quote</h2>
               <p className="mt-2.5 text-[0.925rem] leading-relaxed text-slate">
-                The call is in your email too, but the calendar is open now. Thirty
-                minutes, no pitch.
+                Same call is in your email too, but the calendar is open now.
+                Thirty minutes, no pitch.
               </p>
 
               <ul className="mt-6 space-y-3">

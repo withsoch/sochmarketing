@@ -15,8 +15,8 @@ export function PlatformStrip() {
         <Reveal className="max-w-2xl">
           <span className="eyebrow">Channels we run</span>
           <p className="lead mt-4">
-            One plan, run natively across every app your customers use to
-            find and order from you.
+            One plan, run properly across every app your customers already
+            use to find you and order from you.
           </p>
         </Reveal>
 

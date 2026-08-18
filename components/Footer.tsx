@@ -36,7 +36,7 @@ export function Footer() {
           </FooterCol>
 
           <FooterCol title="Platforms">
-            {/* Plain text, not links — there are no per-platform pages. */}
+            {/* Plain text, not links. There are no per-platform pages. */}
             {PLATFORMS.map((p) => (
               <li key={p.id} className="text-sm text-white/60">
                 {p.name}

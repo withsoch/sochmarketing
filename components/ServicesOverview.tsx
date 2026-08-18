@@ -5,7 +5,7 @@ import { SERVICE_CATEGORIES } from "@/lib/content";
 /**
  * The /services hero visual: an editorial index of the categories rather
  * than a decorative diagram. It tells you what is on the page and takes you
- * straight to any of it — a table of contents, in the brand's serif idiom.
+ * straight to any of it, a table of contents in the brand's serif idiom.
  */
 export function ServicesOverview() {
   return (

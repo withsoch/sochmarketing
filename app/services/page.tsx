@@ -6,9 +6,9 @@ import { CtaBand } from "@/components/CtaBand";
 import { Reveal } from "@/components/ui/Reveal";
 
 export const metadata: Metadata = {
-  title: "Services: Social, Google, Reviews & Delivery Marketing",
+  title: "Services: Social, Google, Reviews & Delivery",
   description:
-    "Instagram, TikTok and Facebook content, Google Business Profile management, review generation, AI-produced photos and video, one-page websites, Wolt & Bolt Food listings, and ad management. The full Soch system for restaurants, cafes and shisha lounges in Tallinn.",
+    "Instagram, TikTok and Facebook content, Google Business Profile management, review replies, AI-produced photos and video, one-page websites, Wolt & Bolt Food listings, and ad management, for restaurants, cafes and shisha lounges in Tallinn.",
 };
 
 const FACTS = [
@@ -32,17 +32,17 @@ export default function ServicesPage() {
                 <h1 className="text-display mt-5 text-[clamp(2.3rem,1.4rem+3vw,3.6rem)]">
                   Everything your venue needs online.{" "}
                   <span className="italic text-brand">
-                    Take the system, or one piece of it.
+                    Take one piece, or hand us the lot.
                   </span>
                 </h1>
               </Reveal>
 
               <Reveal delay={0.1}>
                 <p className="lead mt-5">
-                  Every service below is built around one goal: making your
-                  restaurant, cafe or lounge easy to find and worth ordering
-                  from, on Instagram, Google, TikTok, Facebook and delivery
-                  apps.
+                  Every service below does one of two things: makes you
+                  easier to find, or makes people order once they&apos;ve
+                  found you. Across Instagram, Google, TikTok, Facebook and
+                  your delivery apps.
                 </p>
               </Reveal>
 
@@ -87,7 +87,7 @@ export default function ServicesPage() {
 
       <CtaBand
         title="Not sure which piece you need"
-        subtitle="Get a quote. We will look at your venue, tell you which of these services would move the needle first, and be straight with you if the answer is none of them yet."
+        subtitle="Get a quote. We'll look at your venue, tell you which of these would help first, and say so plainly if the answer is none of them yet."
       />
     </>
   );

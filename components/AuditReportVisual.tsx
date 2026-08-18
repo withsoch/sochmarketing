@@ -2,7 +2,7 @@ import { Icon } from "@/components/Icons";
 
 /**
  * The /audit hero visual: a mock-up of the report we actually send back.
- * Deliberately shows the artefact rather than decorating around it — same
+ * Deliberately shows the artefact rather than decorating around it, same
  * card idiom as ServiceVisual (white card, hairline ring, soft lift).
  * No stock faces: channel dots and typography carry it.
  */

@@ -11,7 +11,7 @@ export function LogoMarquee() {
     <section className="border-b border-line bg-white py-10">
       <div className="container-x">
         <p className="text-center text-[18px] font-medium text-muted">
-          Trusted by restaurants, cafes and lounges in Tallinn
+          Restaurants, cafes and lounges we work with in Tallinn
         </p>
         <div className="relative mt-7 overflow-hidden [mask-image:linear-gradient(90deg,transparent,black_12%,black_88%,transparent)]">
           <div className="flex w-max animate-marquee items-center gap-16 pr-16">

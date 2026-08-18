@@ -21,10 +21,9 @@ export function Hero() {
           </h1>
 
           <p className="lead text-[clamp(0.95rem,0.88rem+0.28vw,1.1rem)] mt-5 animate-fade-up [animation-delay:160ms]">
-            Soch runs the marketing for restaurants, cafes and shisha lounges:
-            Instagram and Facebook content, your Google Business Profile,
-            review replies, and your Wolt or Bolt Food listings, so you look
-            active, get found, and get more orders.
+            We manage your digital presence, so people looking for a place
+            to eat tonight find you first. You set the vision. We handle
+            the rest.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-3 animate-fade-up [animation-delay:240ms]">

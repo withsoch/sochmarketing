@@ -84,7 +84,7 @@ export function AuditModal() {
     setSubmitError("");
 
     if (!AUDIT_WEBHOOK_URL) {
-      // No webhook configured yet — open a prefilled mailto so the form
+      // No webhook configured yet, open a prefilled mailto so the form
       // never silently fails against a URL that doesn't exist.
       const body = encodeURIComponent(
         `First name: ${form.firstName}\nProfile link: ${form.channelUrl}\nEmail: ${form.email}\nVenue name: ${form.roleCompany}`,
@@ -151,10 +151,10 @@ export function AuditModal() {
             <h2 id="audit-modal-title" className="font-display text-[1.55rem] font-semibold leading-snug text-ink">
               Get Your{" "}
               <span className="text-brand">Free Venue Audit</span>{" "}
-              Within 24 hours!
+              in 24 Hours
             </h2>
             <p className="mt-3 text-sm italic leading-relaxed text-slate">
-              Drop your Instagram or Google listing link below. Our team will review it personally and send you the full breakdown within 24 hours.
+              Drop your Instagram or Google listing link below. A person on our team reads it and sends back the full breakdown within 24 hours.
             </p>
 
             <form onSubmit={handleSubmit} noValidate className="mt-6 space-y-4">
@@ -186,7 +186,7 @@ export function AuditModal() {
                   <input
                     id="audit-channel-url"
                     type="url"
-                    placeholder="Instagram, Google Business Profile, Wolt, Bolt Food — paste a link"
+                    placeholder="Instagram, Google Business Profile, Wolt, Bolt Food: paste a link"
                     value={form.channelUrl}
                     onChange={(e) => {
                       setForm((f) => ({ ...f, channelUrl: e.target.value }));
@@ -272,7 +272,7 @@ export function AuditModal() {
                   disabled={submitting}
                   className="mt-1 w-full rounded-lg bg-brand py-3.5 text-sm font-semibold text-white transition-colors hover:bg-brand-dark active:bg-brand-deep disabled:opacity-60 disabled:cursor-not-allowed"
                 >
-                  {submitting ? "Sending..." : "Send My Profile →"}
+                  {submitting ? "Sending..." : "Send My Links →"}
                 </button>
             </form>
           </>

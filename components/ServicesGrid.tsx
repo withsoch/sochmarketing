@@ -14,8 +14,9 @@ export function ServicesGrid() {
             Everything your venue needs online, in one place.
           </h2>
           <p className="lead mt-5">
-            From a profile that looks active to listings that sell. Take one
-            service, or hand us the lot, across every app your customers use.
+            From a profile that looks open to a delivery listing that sells.
+            Take one piece, or hand us the whole thing, across every app your
+            customers already use.
           </p>
           <div className="mt-7">
             <Button href="/services" variant="dark" arrow>
