@@ -87,9 +87,9 @@ export function AuditModal() {
       // No webhook configured yet — open a prefilled mailto so the form
       // never silently fails against a URL that doesn't exist.
       const body = encodeURIComponent(
-        `First name: ${form.firstName}\nProfile link: ${form.channelUrl}\nEmail: ${form.email}\nRole & company: ${form.roleCompany}`,
+        `First name: ${form.firstName}\nProfile link: ${form.channelUrl}\nEmail: ${form.email}\nVenue name: ${form.roleCompany}`,
       );
-      window.location.href = `mailto:${SITE.email}?subject=Free%20Social%20Audit%20Request&body=${body}`;
+      window.location.href = `mailto:${SITE.email}?subject=Free%20Venue%20Audit%20Request&body=${body}`;
       closeModal();
       router.push("/confirmation");
       return;
@@ -150,11 +150,11 @@ export function AuditModal() {
           <>
             <h2 id="audit-modal-title" className="font-display text-[1.55rem] font-semibold leading-snug text-ink">
               Get Your{" "}
-              <span className="text-brand">Free Social Audit</span>{" "}
+              <span className="text-brand">Free Venue Audit</span>{" "}
               Within 24 hours!
             </h2>
             <p className="mt-3 text-sm italic leading-relaxed text-slate">
-              Drop your main profile link below. I will review your channels personally and send you the full breakdown within 24 hours.
+              Drop your Instagram or Google listing link below. Our team will review it personally and send you the full breakdown within 24 hours.
             </p>
 
             <form onSubmit={handleSubmit} noValidate className="mt-6 space-y-4">
@@ -181,12 +181,12 @@ export function AuditModal() {
                 {/* Main channel URL */}
                 <div>
                   <label htmlFor="audit-channel-url" className="block text-sm font-semibold text-ink">
-                    Your Main Profile Link (any platform) <span aria-hidden="true" className="text-brand">*</span>
+                    Your Instagram or Google Listing Link <span aria-hidden="true" className="text-brand">*</span>
                   </label>
                   <input
                     id="audit-channel-url"
                     type="url"
-                    placeholder="LinkedIn, Instagram, X — paste a link"
+                    placeholder="Instagram, Google Business Profile, Wolt, Bolt Food — paste a link"
                     value={form.channelUrl}
                     onChange={(e) => {
                       setForm((f) => ({ ...f, channelUrl: e.target.value }));
@@ -235,12 +235,12 @@ export function AuditModal() {
                 {/* Role & Company */}
                 <div>
                   <label htmlFor="audit-role" className="block text-sm font-semibold text-ink">
-                    Your Role &amp; Company
+                    Venue Name
                   </label>
                   <input
                     id="audit-role"
                     type="text"
-                    placeholder="Your Role & Company"
+                    placeholder="Venue Name"
                     value={form.roleCompany}
                     onChange={(e) => setForm((f) => ({ ...f, roleCompany: e.target.value }))}
                     className="mt-1.5 w-full rounded-lg border border-line bg-white px-4 py-3 text-sm text-ink placeholder:text-muted outline-none transition-colors focus:border-brand/60 focus:ring-2 focus:ring-brand/15"
@@ -258,8 +258,8 @@ export function AuditModal() {
                   />
                   <label htmlFor="audit-consent" className="cursor-pointer text-xs leading-relaxed text-slate">
                     By checking this box, I consent to receive communications from{" "}
-                    <span className="font-semibold text-ink">Soch</span> about my Social Audit,
-                    Strategy Call booking and other relevant updates.
+                    <span className="font-semibold text-ink">Soch</span> about my Venue Audit,
+                    quote and other relevant updates.
                   </label>
                 </div>
 

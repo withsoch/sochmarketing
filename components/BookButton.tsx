@@ -25,7 +25,7 @@ type Props = {
 };
 
 export function BookButton({
-  children = "Book a Discovery Call",
+  children = "Get a quote",
   variant = "primary",
   size = "md",
   arrow = false,

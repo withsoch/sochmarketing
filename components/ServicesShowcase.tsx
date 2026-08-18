@@ -5,23 +5,13 @@ import { Reveal } from "@/components/ui/Reveal";
 import { AuditButton } from "@/components/AuditButton";
 import { BookButton } from "@/components/BookButton";
 import { Icon } from "@/components/Icons";
-import { ServiceVisual } from "@/components/ServiceVisual";
-import { SERVICES } from "@/lib/content";
-
-// Short rail labels (the full titles are too long for the index).
-const LABELS: Record<string, string> = {
-  "profile-bio-optimisation": "Profile",
-  "content-writing-production": "Content",
-  "community-engagement": "Community",
-  "personal-brand-strategy": "Branding",
-  "channel-strategy-coaching": "Coaching",
-  "social-growth-audit": "Audit",
-};
+import { CategoryVisual } from "@/components/CategoryVisual";
+import { SERVICE_CATEGORIES } from "@/lib/content";
 
 const num = (i: number) => String(i + 1).padStart(2, "0");
 
 export function ServicesShowcase() {
-  const [active, setActive] = useState(SERVICES[0].slug);
+  const [active, setActive] = useState(SERVICE_CATEGORIES[0].slug);
   const refs = useRef<Record<string, HTMLElement | null>>({});
 
   useEffect(() => {
@@ -31,7 +21,7 @@ export function ServicesShowcase() {
           if (entry.isIntersecting) setActive(entry.target.id);
         }
       },
-      // A thin band near the upper-middle of the viewport: whichever service
+      // A thin band near the upper-middle of the viewport: whichever category
       // crosses it becomes "active".
       { rootMargin: "-45% 0px -50% 0px" },
     );
@@ -45,12 +35,12 @@ export function ServicesShowcase() {
       <div className="sticky top-[4.5rem] z-20 border-b border-line bg-white/85 backdrop-blur lg:hidden">
         <div className="container-x overflow-x-auto py-3">
           <div className="flex w-max gap-2">
-            {SERVICES.map((s, i) => (
+            {SERVICE_CATEGORIES.map((c, i) => (
               <a
-                key={s.slug}
-                href={`#${s.slug}`}
+                key={c.slug}
+                href={`#${c.slug}`}
                 className={`whitespace-nowrap rounded-full border px-3.5 py-1.5 text-xs font-medium transition-colors ${
-                  active === s.slug
+                  active === c.slug
                     ? "border-brand bg-peach/50 text-brand-dark"
                     : "border-line text-ink-soft"
                 }`}
@@ -61,7 +51,7 @@ export function ServicesShowcase() {
                 >
                   {num(i)}
                 </span>
-                {LABELS[s.slug]}
+                {c.name}
               </a>
             ))}
           </div>
@@ -73,15 +63,15 @@ export function ServicesShowcase() {
         <aside className="hidden lg:block">
           <div className="sticky top-28 self-start">
             <p className="text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-muted">
-              Services
+              Categories
             </p>
             <nav className="mt-4 border-l border-line">
-              {SERVICES.map((s, i) => {
-                const isActive = active === s.slug;
+              {SERVICE_CATEGORIES.map((c, i) => {
+                const isActive = active === c.slug;
                 return (
                   <a
-                    key={s.slug}
-                    href={`#${s.slug}`}
+                    key={c.slug}
+                    href={`#${c.slug}`}
                     aria-current={isActive ? "true" : undefined}
                     className={`group -ml-px flex items-baseline gap-3 border-l py-2 pl-4 transition-colors ${
                       isActive ? "border-brand" : "border-transparent hover:border-line"
@@ -102,7 +92,7 @@ export function ServicesShowcase() {
                           : "text-muted group-hover:text-ink-soft"
                       }`}
                     >
-                      {LABELS[s.slug]}
+                      {c.name}
                     </span>
                   </a>
                 );
@@ -115,26 +105,26 @@ export function ServicesShowcase() {
               </p>
               <div className="mt-4">
                 <BookButton variant="dark" size="md" arrow>
-                  Book a call
+                  Get a quote
                 </BookButton>
               </div>
             </div>
           </div>
         </aside>
 
-        {/* editorial service rows */}
+        {/* editorial category chapters */}
         <div>
-          {SERVICES.map((s, i) => {
+          {SERVICE_CATEGORIES.map((c, i) => {
             const flipped = i % 2 === 1;
             return (
               <Reveal
-                key={s.slug}
+                key={c.slug}
                 className="border-t border-dashed border-line py-14 first:border-t-0 first:pt-0 lg:py-20"
               >
                 <article
-                  id={s.slug}
+                  id={c.slug}
                   ref={(el) => {
-                    refs.current[s.slug] = el;
+                    refs.current[c.slug] = el;
                   }}
                   className="scroll-mt-32"
                 >
@@ -150,37 +140,35 @@ export function ServicesShowcase() {
                         </span>
                         <span className="h-px w-8 bg-line" />
                         <span className="text-[0.72rem] font-semibold uppercase tracking-[0.12em] text-muted">
-                          {LABELS[s.slug]}
+                          {c.name}
                         </span>
                       </div>
 
                       <h2 className="mt-4 text-[clamp(1.55rem,1.2rem+1.1vw,2.15rem)] leading-[1.12]">
-                        {s.title}
+                        {c.name}
                       </h2>
 
                       <p
                         className="mt-3 text-[1.05rem] leading-snug text-ink-soft"
                         style={{ fontFamily: "var(--font-display)", fontStyle: "italic" }}
                       >
-                        {s.hook}
+                        {c.blurb}
                       </p>
 
-                      <p className="mt-4 text-[0.975rem] leading-relaxed text-slate">
-                        {s.description}
-                      </p>
-
-                      <ul className="mt-6 space-y-2.5 border-t border-line pt-5">
-                        {s.points.map((p) => (
-                          <li
-                            key={p}
-                            className="flex items-start gap-3 text-[0.925rem] text-ink-soft"
-                          >
-                            <Icon
-                              name="check"
-                              className="mt-0.5 h-4 w-4 shrink-0 text-brand"
-                              strokeWidth={2.4}
-                            />
-                            {p}
+                      <ul className="mt-6 space-y-4 border-t border-line pt-5">
+                        {c.services.map((s) => (
+                          <li key={s.title}>
+                            <p className="flex items-start gap-2.5 text-[0.95rem] font-semibold text-ink">
+                              <Icon
+                                name="check"
+                                className="mt-0.5 h-4 w-4 shrink-0 text-brand"
+                                strokeWidth={2.4}
+                              />
+                              {s.title}
+                            </p>
+                            <p className="mt-1 pl-[1.65rem] text-[0.9rem] leading-relaxed text-slate">
+                              {s.description}
+                            </p>
                           </li>
                         ))}
                       </ul>
@@ -188,7 +176,7 @@ export function ServicesShowcase() {
 
                     {/* visual */}
                     <div className={flipped ? "lg:order-1" : ""}>
-                      <ServiceVisual slug={s.slug} />
+                      <CategoryVisual slug={c.slug} />
                     </div>
                   </div>
                 </article>
@@ -203,10 +191,10 @@ export function ServicesShowcase() {
             </p>
             <div className="mt-5 flex flex-col gap-3 sm:flex-row">
               <BookButton variant="primary" size="lg" arrow>
-                Book a Discovery Call
+                Get a quote
               </BookButton>
               <AuditButton variant="secondary" size="lg" className="cursor-pointer">
-                Get a Free Social Audit
+                Get a Free Venue Audit
               </AuditButton>
             </div>
           </Reveal>

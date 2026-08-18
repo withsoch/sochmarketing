@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { Logo } from "@/components/Logo";
 import { Icon } from "@/components/Icons";
-import { NAV, SERVICES, SITE } from "@/lib/content";
+import { NAV, SERVICE_CATEGORIES, SITE } from "@/lib/content";
+import { PLATFORMS } from "@/lib/channels";
 import { AuditFooterLink } from "@/components/AuditFooterLink";
 import { BookFooterLink } from "@/components/BookFooterLink";
 
@@ -10,7 +11,7 @@ export function Footer() {
     <footer className="bg-charcoal text-white/70">
       <div className="container-x">
         {/* link columns */}
-        <div className="grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
+        <div className="grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-[1.3fr_0.85fr_1.15fr_0.85fr_1fr]">
           <div className="max-w-xs">
             <Logo variant="light" />
             <p className="mt-4 text-sm leading-relaxed text-white/60">
@@ -27,10 +28,19 @@ export function Footer() {
           </FooterCol>
 
           <FooterCol title="Services">
-            {SERVICES.slice(0, 5).map((s) => (
-              <FooterLink key={s.slug} href={`/services#${s.slug}`}>
-                {s.title}
+            {SERVICE_CATEGORIES.map((c) => (
+              <FooterLink key={c.slug} href={`/services#${c.slug}`}>
+                {c.name}
               </FooterLink>
+            ))}
+          </FooterCol>
+
+          <FooterCol title="Platforms">
+            {/* Plain text, not links — there are no per-platform pages. */}
+            {PLATFORMS.map((p) => (
+              <li key={p.id} className="text-sm text-white/60">
+                {p.name}
+              </li>
             ))}
           </FooterCol>
 

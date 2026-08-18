@@ -11,8 +11,8 @@ export function HowWeWork() {
           <div className="max-w-2xl">
             <h2 className="text-h2">Four steps. No guesswork.</h2>
             <p className="lead mt-5">
-              We do the work and keep you in control. Here&apos;s how we get you from
-              ignored to in demand.
+              We do the work and keep you in control. Here&apos;s how we get your
+              venue from overlooked to fully booked.
             </p>
           </div>
         </div>

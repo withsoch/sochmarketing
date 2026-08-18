@@ -13,9 +13,9 @@ import {
 } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Get a Free Social Audit",
+  title: "Get a Free Venue Audit",
   description:
-    "Request a free social media audit. We review your profiles, content and community across every channel and send back a prioritised plan of the moves that will get you the most return. No ads, no SEO.",
+    "Request a free venue audit. We review your Instagram, Google Business Profile and delivery listings, then send back a prioritised plan of the moves that will get you the most return.",
 };
 
 const HERO_FACTS = [
@@ -34,20 +34,20 @@ export default function AuditPage() {
             {/* copy */}
             <div className="max-w-xl">
               <Reveal delay={0}>
-                <span className="eyebrow">Free social audit</span>
+                <span className="eyebrow">Free venue audit</span>
               </Reveal>
 
               <Reveal delay={0.05}>
                 <h1 className="text-display mt-5 text-[clamp(2.2rem,1.3rem+3.2vw,3.6rem)]">
-                  See exactly what&apos;s holding your channels back.
+                  See exactly what&apos;s holding your venue back online.
                 </h1>
               </Reveal>
 
               <Reveal delay={0.1}>
                 <p className="lead mt-5">
-                  Send one profile link. We read your profiles, content and
-                  community across every channel you&apos;re on, by hand, then send
-                  back a written plan of what to fix first, in what order.
+                  Send us your links. We read your Instagram, your Google
+                  listing and your delivery apps, by hand, then send back a
+                  written plan of what to fix first, in what order.
                 </p>
               </Reveal>
 
@@ -146,7 +146,7 @@ export default function AuditPage() {
                   className="relative z-10 inline-flex h-10 w-10 items-center justify-center rounded-full bg-white text-[0.9rem] text-ink ring-1 ring-line"
                   style={{
                     fontFamily: "var(--font-display)",
-                    fontWeight: 560,
+                    fontWeight: 600,
                     fontVariantNumeric: "tabular-nums",
                   }}
                 >
@@ -170,8 +170,8 @@ export default function AuditPage() {
               className="text-[1.45rem] leading-snug text-ink"
               style={{ fontFamily: "var(--font-display)", fontWeight: 500 }}
             >
-              Trusted by 40+ founders and senior executives across Europe, North
-              America and the UK.
+              Built for restaurants, cafes and shisha lounges, starting with a
+              pilot in Tallinn.
             </p>
             <ul className="grid gap-x-8 gap-y-3.5 sm:grid-cols-2">
               {AUDIT_EXCLUSIONS.map((x) => (
@@ -218,7 +218,7 @@ export default function AuditPage() {
 
       <CtaBand
         title="Prefer to talk it through first"
-        subtitle="Book a free discovery call instead. Same honesty, live, and we can look at your channels together on the call."
+        subtitle="Get a quote instead. Same honesty, live, and we can look at your venue together on the call."
       />
     </>
   );

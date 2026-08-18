@@ -28,7 +28,7 @@ export function AuditButton({
   variant = "secondary",
   size = "md",
   className = "",
-  children = "Get a Free Social Audit",
+  children = "Get a Free Venue Audit",
 }: Props) {
   const { openModal } = useAuditModal();
   const cls = `group inline-flex items-center justify-center gap-2 rounded-lg font-semibold transition-colors duration-200 ${variants[variant]} ${sizes[size]} ${className}`;

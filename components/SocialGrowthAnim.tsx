@@ -2,17 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { motion, useReducedMotion } from "motion/react";
-
-type Channel = "linkedin" | "instagram" | "x" | "tiktok" | "youtube" | "facebook";
-
-const CHANNEL_VAR: Record<Channel, string> = {
-  linkedin: "var(--color-channel-linkedin)",
-  instagram: "var(--color-channel-instagram)",
-  x: "var(--color-channel-x)",
-  tiktok: "var(--color-channel-tiktok)",
-  youtube: "var(--color-channel-youtube)",
-  facebook: "var(--color-channel-facebook)",
-};
+import { CHANNEL_VAR, type Channel } from "@/lib/channels";
 
 function ChannelDot({ channel }: { channel: Channel }) {
   return (
@@ -25,25 +15,25 @@ function ChannelDot({ channel }: { channel: Channel }) {
 }
 
 const CALENDAR: { channel: Channel; label: string; day: string }[] = [
-  { channel: "linkedin", label: "Founder story", day: "Mon" },
-  { channel: "instagram", label: "Reel · behind the scenes", day: "Tue" },
-  { channel: "x", label: "Thread · lessons learned", day: "Wed" },
-  { channel: "youtube", label: "Short · client win", day: "Thu" },
-  { channel: "tiktok", label: "Duet · industry take", day: "Fri" },
+  { channel: "instagram", label: "Reel · new menu item", day: "Mon" },
+  { channel: "google", label: "Google post · weekend hours", day: "Tue" },
+  { channel: "facebook", label: "Event · live music night", day: "Wed" },
+  { channel: "bolt", label: "Listing update · seasonal dish", day: "Thu" },
+  { channel: "tiktok", label: "Plating close-up", day: "Fri" },
 ];
 
 const METRICS: { label: string; target: number }[] = [
-  { label: "Reach", target: 48200 },
-  { label: "Engagement", target: 3140 },
-  { label: "Profile visits", target: 960 },
-  { label: "Inbound DMs", target: 27 },
+  { label: "Reach", target: 18200 },
+  { label: "Profile visits", target: 1340 },
+  { label: "Directions asked", target: 146 },
+  { label: "Reviews replied", target: 32 },
 ];
 
 const NOTIFS: { channel: Channel; title: string; sub: string; top?: string; bottom?: string; left?: string; right?: string }[] = [
-  { channel: "instagram", title: "New comment on your Reel", sub: "“Exactly the framework I needed”", top: "8%", left: "-14%" },
-  { channel: "x", title: "3 replies on your thread", sub: "Growing conversation", top: "38%", right: "-16%" },
-  { channel: "linkedin", title: "Priya wants to connect", sub: "CPO · Coursera", top: "62%", left: "-16%" },
-  { channel: "tiktok", title: "New DM: interested in a demo", sub: "From today's duet", bottom: "4%", right: "-14%" },
+  { channel: "google", title: "New 5-star review", sub: "“Best shisha lounge around”", top: "8%", left: "-14%" },
+  { channel: "instagram", title: "12 new comments on your Reel", sub: "Growing conversation", top: "38%", right: "-16%" },
+  { channel: "bolt", title: "Listing photos updated", sub: "Best-sellers repositioned", top: "62%", left: "-16%" },
+  { channel: "facebook", title: "3 people asked for directions", sub: "From today's event post", bottom: "4%", right: "-14%" },
 ];
 
 function formatNumber(v: number) {

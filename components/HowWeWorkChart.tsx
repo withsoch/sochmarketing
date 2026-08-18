@@ -56,7 +56,7 @@ export function HowWeWorkChart() {
   return (
     <div className="relative mt-16 hidden h-60 lg:block" aria-hidden>
       <span className="absolute left-[3%] top-0 text-xs font-medium tracking-wide text-muted">
-        Authority &amp; inbound, compounding →
+        Visibility &amp; orders, compounding →
       </span>
 
       <svg className="absolute inset-0 h-full w-full" viewBox="0 0 100 100" preserveAspectRatio="none">

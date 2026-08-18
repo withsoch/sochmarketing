@@ -3,19 +3,19 @@ import { Icon, type IconName } from "@/components/Icons";
 
 const PILLARS: { icon: IconName; title: string; body: string }[] = [
   {
-    icon: "shield",
-    title: "Positioning before content",
-    body: "If you don't know what you stand for, no amount of posting will fix that. We start with the narrative before we write a single word.",
+    icon: "pin",
+    title: "Found on Google, first",
+    body: "Most people decide where to eat by searching nearby, not by scrolling. We build and run your Google Business Profile so you're the one they find, and every review gets a reply within 24 hours.",
   },
   {
-    icon: "chat",
-    title: "Your voice. Your point of view.",
-    body: "We study how you think, how you talk, and what you believe. Then we write and produce content that sounds like you, only sharper and more deliberate, on every channel.",
+    icon: "image",
+    title: "Look active, every week",
+    body: "A quiet feed reads as a closed venue. We keep Instagram, Facebook and TikTok posting on a real schedule, with photos and video produced for you, in Estonian and English.",
   },
   {
-    icon: "target",
-    title: "Pipeline, not applause",
-    body: "Follower counts don't pay the bills. We measure success by qualified conversations started, inbound leads generated, and opportunities created, never by ad spend.",
+    icon: "bag",
+    title: "Orders, not just likes",
+    body: "If you take delivery orders, your Wolt or Bolt Food listing is doing half your selling. We rebuild it properly and keep it current, so browsing turns into an order.",
   },
 ];
 
@@ -26,13 +26,13 @@ export function Positioning() {
       <div className="container-x">
         <Reveal className="max-w-3xl">
           <h2 className="text-h2">
-            Most social agencies sell posts. We build the system behind them.
+            Most agencies sell posts. We build the system behind them.
           </h2>
           <p className="lead mt-5">
-            Your buyers are already scrolling somewhere. We handle the branding,
-            content and community across every channel that matters, so your
-            presence brings you work instead of wasting your time, without a
-            dollar spent on ads.
+            Your customers are already deciding where to eat — on Google, on
+            Instagram, in the Wolt app. We handle the profile, the content and
+            the listings on the platforms they actually use, so your venue
+            looks active and easy to find.
           </p>
         </Reveal>
 

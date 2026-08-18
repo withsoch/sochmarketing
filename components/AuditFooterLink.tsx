@@ -2,7 +2,7 @@
 
 import { useAuditModal } from "@/context/AuditModalContext";
 
-export function AuditFooterLink({ children = "Free social audit" }: { children?: React.ReactNode }) {
+export function AuditFooterLink({ children = "Free venue audit" }: { children?: React.ReactNode }) {
   const { openModal } = useAuditModal();
   return (
     <li>

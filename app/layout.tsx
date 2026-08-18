@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Fraunces } from "next/font/google";
+import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -13,9 +13,10 @@ const inter = Inter({
   display: "swap",
 });
 
-// Editorial serif for headlines - the brand voice shared with Soch Catalyst.
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
+// Geometric sans for headlines and the wordmark. Poppins is not a variable
+// font on Google Fonts, so every weight we use has to be requested explicitly.
+const poppins = Poppins({
+  variable: "--font-poppins",
   subsets: ["latin"],
   weight: ["400", "500", "600"],
   style: ["normal", "italic"],
@@ -28,31 +29,35 @@ const SITE_URL = "https://soch.co";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Soch: Social Media Management for Founders & CEOs",
+    default: "Soch: Marketing for Restaurants, Cafes & Lounges",
     template: "%s · Soch",
   },
   description:
-    "Soch is an organic social media management agency for B2B founders and senior executives. We run your profile, content and community across every channel that matters — no paid ads, no SEO.",
+    "Soch runs the marketing for restaurants, cafes and shisha lounges: Instagram and Facebook content, Google Business Profile, review replies, Wolt & Bolt Food listings and ads. Packages from €290/month, starting in Tallinn.",
   keywords: [
-    "social media management agency",
-    "organic social media growth",
-    "personal branding for founders",
-    "multi-channel content strategy",
-    "LinkedIn Instagram X content management",
+    "restaurant marketing agency",
+    "cafe social media management",
+    "shisha lounge marketing",
+    "Google Business Profile management",
+    "restaurant review management",
+    "Instagram management for restaurants",
+    "Wolt listing management",
+    "Bolt Food listing management",
+    "restaurant marketing Tallinn",
   ],
   openGraph: {
-    title: "Soch: Social Media Management for Founders & CEOs",
+    title: "Soch: Marketing for Restaurants, Cafes & Lounges",
     description:
-      "Soch is an organic social media management agency for B2B founders and senior executives. We run your profile, content and community across every channel that matters — no paid ads, no SEO.",
+      "Soch runs the marketing for restaurants, cafes and shisha lounges: Instagram and Facebook content, Google Business Profile, review replies, Wolt & Bolt Food listings and ads. Packages from €290/month, starting in Tallinn.",
     url: SITE_URL,
     siteName: "Soch",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Soch: Social Media Management for Founders & CEOs",
+    title: "Soch: Marketing for Restaurants, Cafes & Lounges",
     description:
-      "Soch is an organic social media management agency for B2B founders and senior executives. We run your profile, content and community across every channel that matters — no paid ads, no SEO.",
+      "Soch runs the marketing for restaurants, cafes and shisha lounges: Instagram and Facebook content, Google Business Profile, review replies, Wolt & Bolt Food listings and ads. Packages from €290/month, starting in Tallinn.",
   },
 };
 
@@ -64,7 +69,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${fraunces.variable} h-full antialiased`}
+      className={`${inter.variable} ${poppins.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col overflow-x-hidden bg-white">
         <AuditModalProvider>
