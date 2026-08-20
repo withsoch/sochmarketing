@@ -10,7 +10,7 @@ export function Hero() {
       {/* one soft, flat peach wash behind the visual, no glow blobs */}
       <div className="pointer-events-none absolute right-0 top-0 hidden h-full w-1/2 bg-[radial-gradient(60%_60%_at_70%_35%,var(--color-peach),transparent_70%)] opacity-70 lg:block" />
 
-      <div className="container-x relative grid items-start gap-10 py-10 sm:py-12 lg:grid-cols-[1.05fr_0.95fr] lg:py-14">
+      <div className="container-x relative grid items-start gap-10 py-10 sm:py-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:py-14">
         {/* ---- copy ---- */}
         <div className="max-w-xl">
           <span className="eyebrow animate-fade-up [animation-delay:0ms]">{HERO.eyebrow}</span>
@@ -36,13 +36,12 @@ export function Hero() {
             </AuditButton>
           </div>
 
-          <div className="mt-9 flex items-center gap-3 animate-fade-up [animation-delay:340ms]">
+          <div className="mt-8 flex items-center gap-3 animate-fade-up [animation-delay:340ms]">
             <Link
               href="/packages"
-              className="group inline-flex items-center gap-2 text-sm text-slate transition-colors hover:text-ink"
+              className="group inline-flex items-center gap-2 text-sm font-medium text-slate transition-colors hover:text-ink"
             >
-              Packages start from{" "}
-              <span className="font-semibold text-ink">€290/month excl. VAT</span>
+              See what&apos;s in a package
               <Icon
                 name="arrow"
                 className="h-4 w-4 text-brand transition-transform duration-200 group-hover:translate-x-0.5"
@@ -52,7 +51,7 @@ export function Hero() {
         </div>
 
         {/* ---- product visual ---- */}
-        <div className="animate-pop lg:mx-0 lg:ml-auto lg:scale-[0.88] lg:origin-top">
+        <div className="animate-pop lg:mx-0 lg:ml-auto lg:origin-top lg:scale-[0.93]">
           <SocialGrowthAnim />
         </div>
       </div>

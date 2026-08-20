@@ -1,6 +1,6 @@
 import { Reveal } from "@/components/ui/Reveal";
-import { PlatformIcon } from "@/components/PlatformIcons";
-import { CHANNEL_VAR, PLATFORMS } from "@/lib/channels";
+import { PlatformMark } from "@/components/PlatformIcons";
+import { PLATFORMS } from "@/lib/channels";
 
 /**
  * Names the channels we actually run. The homepage otherwise talks about
@@ -20,36 +20,22 @@ export function PlatformStrip() {
           </p>
         </Reveal>
 
-        <div className="mt-10 grid grid-cols-2 gap-x-6 gap-y-8 border-t border-line pt-9 sm:grid-cols-3 lg:grid-cols-6">
-          {PLATFORMS.map((p, i) =>
-            p.mark === "glyph" ? (
-              <Reveal key={p.id} delay={i * 0.06} className="flex items-center gap-3">
-                <PlatformIcon
-                  id={p.id as "instagram" | "facebook" | "tiktok" | "google"}
-                  className={`h-7 w-7 shrink-0 ${p.primary ? "" : "opacity-45"}`}
-                  style={{ color: CHANNEL_VAR[p.id] }}
-                />
-                <span
-                  className={`text-[0.975rem] font-semibold ${
-                    p.primary ? "text-ink" : "text-muted"
-                  }`}
-                >
-                  {p.name}
-                </span>
-              </Reveal>
-            ) : (
-              <Reveal key={p.id} delay={i * 0.06} className="flex items-center">
-                <span
-                  className={`inline-flex h-7 shrink-0 items-center rounded-md px-2.5 text-[0.85rem] font-bold text-white ${
-                    p.primary ? "" : "opacity-45"
-                  }`}
-                  style={{ background: CHANNEL_VAR[p.id] }}
-                >
-                  {p.name}
-                </span>
-              </Reveal>
-            ),
-          )}
+        <div className="mt-10 grid grid-cols-2 gap-3 border-t border-line pt-9 sm:grid-cols-3 lg:grid-cols-6">
+          {PLATFORMS.map((p, i) => (
+            <Reveal key={p.id} delay={i * 0.06}>
+              <div className="group flex h-full items-center gap-3 rounded-xl border border-line bg-cream px-3 py-3 transition-colors hover:border-ink/15 hover:bg-white">
+                <PlatformMark id={p.id} size="md" />
+                <div className="min-w-0">
+                  <p className="truncate text-[0.925rem] font-semibold leading-tight text-ink">
+                    {p.name}
+                  </p>
+                  <p className="mt-0.5 text-[0.72rem] leading-snug text-balance text-muted">
+                    {p.role}
+                  </p>
+                </div>
+              </div>
+            </Reveal>
+          ))}
         </div>
       </div>
     </section>
