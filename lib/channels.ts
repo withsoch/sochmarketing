@@ -24,19 +24,61 @@ export const CHANNEL_VAR: Record<Channel, string> = {
 
 /**
  * Ordered for display. Instagram, Google and Facebook are where nearly
- * every venue needs to show up; TikTok, Wolt and Bolt Food are rendered at
- * lower emphasis rather than hidden, since not every venue needs them.
+ * every venue needs to show up; TikTok, Wolt and Bolt Food are marked
+ * non-primary because not every venue needs them - but they still get a
+ * full-strength mark, since a faded logo reads as "broken", not "optional".
+ *
+ * `mark` picks how the logo is drawn (see components/PlatformIcons.tsx):
+ * a real brand glyph, or an initial on the brand colour for the two
+ * wordmark-only delivery brands.
  */
 export const PLATFORMS: {
   id: Channel;
   name: string;
+  role: string;
   primary: boolean;
-  mark: "glyph" | "wordmark";
+  mark: "glyph" | "monogram";
 }[] = [
-  { id: "instagram", name: "Instagram", primary: true, mark: "glyph" },
-  { id: "google", name: "Google", primary: true, mark: "glyph" },
-  { id: "facebook", name: "Facebook", primary: true, mark: "glyph" },
-  { id: "tiktok", name: "TikTok", primary: false, mark: "glyph" },
-  { id: "wolt", name: "Wolt", primary: false, mark: "wordmark" },
-  { id: "bolt", name: "Bolt Food", primary: false, mark: "wordmark" },
+  {
+    id: "instagram",
+    name: "Instagram",
+    role: "Reels & Stories",
+    primary: true,
+    mark: "glyph",
+  },
+  {
+    id: "google",
+    name: "Google",
+    role: "Search & reviews",
+    primary: true,
+    mark: "glyph",
+  },
+  {
+    id: "facebook",
+    name: "Facebook",
+    role: "Events & local reach",
+    primary: true,
+    mark: "glyph",
+  },
+  {
+    id: "tiktok",
+    name: "TikTok",
+    role: "Short‑form video",
+    primary: false,
+    mark: "glyph",
+  },
+  {
+    id: "wolt",
+    name: "Wolt",
+    role: "Delivery listing",
+    primary: false,
+    mark: "monogram",
+  },
+  {
+    id: "bolt",
+    name: "Bolt Food",
+    role: "Delivery listing",
+    primary: false,
+    mark: "monogram",
+  },
 ];
