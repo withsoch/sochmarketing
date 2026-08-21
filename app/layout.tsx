@@ -28,6 +28,11 @@ const SITE_URL = "https://soch.co";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
+  icons: {
+    icon: "/logos/favicon-icon.png",
+    shortcut: "/logos/favicon-icon.png",
+    apple: "/logos/favicon-icon.png",
+  },
   title: {
     default: "Soch: Marketing for Restaurant, Cafe & Lounge Owners",
     template: "%s · Soch",

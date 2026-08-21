@@ -1,16 +1,16 @@
+import Image from "next/image";
 import Link from "next/link";
 
-// Two interlocking circles - a redrawn, vector-only echo of the Soch
-// Catalyst mark. No dependency on raster artwork, so it's a placeholder the
-// client can swap for real brand assets later without touching call sites.
-function Mark({ className = "" }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 40 40" className={className} aria-hidden="true">
-      <circle cx="15" cy="14" r="8.5" fill="none" stroke="currentColor" strokeWidth="3.2" />
-      <circle cx="25" cy="26" r="8.5" fill="none" stroke="var(--color-brand)" strokeWidth="3.2" />
-    </svg>
-  );
-}
+// Wordmark images live in public/logos/. NOTE: despite the filenames,
+// soch-logo-dark.png renders as a light/white mark (built for dark
+// backgrounds) and soch-logo-light.png renders full-color (built for light
+// backgrounds) - the opposite of what the names imply. Mapped here exactly
+// as specified; swap the two src paths below if the navbar/footer render
+// with the wrong contrast.
+const LOGO_SRC = {
+  dark: "/logos/soch-logo-light.png",
+  light: "/logos/soch-logo-dark.png",
+};
 
 export function Logo({
   className = "",
@@ -19,22 +19,21 @@ export function Logo({
   className?: string;
   variant?: "dark" | "light";
 }) {
-  // "dark" variant = dark wordmark on light bg (navbar); "light" variant = white wordmark on dark bg (footer)
-  const isLight = variant === "light";
-
+  // "dark" variant = navbar; "light" variant = footer
   return (
     <Link
       href="/"
       aria-label="Soch home"
-      className={`inline-flex items-center gap-2.5 ${className}`}
+      className={`inline-flex items-center ${className}`}
     >
-      <Mark className={`h-8 w-8 ${isLight ? "text-white" : "text-ink"}`} />
-      <span
-        className={`text-[1.5rem] leading-none font-medium ${isLight ? "text-white" : "text-ink"}`}
-        style={{ fontFamily: "var(--font-display)" }}
-      >
-        Soch
-      </span>
+      <Image
+        src={LOGO_SRC[variant]}
+        alt="Soch Catalyst"
+        width={1000}
+        height={250}
+        priority
+        className="h-12 w-auto"
+      />
     </Link>
   );
 }
