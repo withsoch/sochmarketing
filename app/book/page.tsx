@@ -4,6 +4,8 @@ import { BookButton } from "@/components/BookButton";
 import { AuditButton } from "@/components/AuditButton";
 import { Icon } from "@/components/Icons";
 import { Reveal } from "@/components/ui/Reveal";
+import { Photo } from "@/components/ui/Photo";
+import { TEAM } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Get a Quote",
@@ -78,6 +80,32 @@ export default function BookPage() {
               </p>
             </div>
           </Reveal>
+
+          {/* who you'll actually be on the call with - drops out entirely until
+              there is a real person with a real photo in TEAM */}
+          {TEAM[0]?.photo && (
+            <Reveal delay={0.15}>
+              <div className="mt-5 flex flex-col gap-5 rounded-2xl border border-line bg-white p-6 sm:flex-row sm:items-center">
+                <Photo
+                  src={TEAM[0].photo}
+                  alt={`${TEAM[0].name}, ${TEAM[0].role} at Soch`}
+                  ratio="1/1"
+                  sizes="112px"
+                  className="w-28 shrink-0 rounded-xl"
+                />
+                <div>
+                  <p className="text-sm font-semibold text-ink">
+                    Who you&apos;ll be talking to
+                  </p>
+                  <p className="mt-2 text-sm leading-relaxed text-slate">
+                    {TEAM[0].name}, {TEAM[0].role}. You get the person who would
+                    actually run your venue, not a sales team passing you along
+                    afterwards.
+                  </p>
+                </div>
+              </div>
+            </Reveal>
+          )}
 
           <Reveal delay={0.2}>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">

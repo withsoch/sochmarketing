@@ -451,12 +451,41 @@ export const STATS = [
   { value: "100%", label: "Posts approved by you before going live" },
 ];
 
+// ------------------------------------------------------------------
+//  Team
+// ------------------------------------------------------------------
+
+export type TeamMember = {
+  name: string;
+  role: string;
+  /** One or two sentences. Who they are, what they actually do here. */
+  bio: string;
+  /** Photo rooted at public/, e.g. "/images/team/mahad.jpg". */
+  photo?: string;
+  /** Fallback disc when there is no photo yet. */
+  initials: string;
+  accent: string;
+};
+
+// Add real people here. The About page team section renders nothing at all
+// while this is empty, so the page is never left with a heading over
+// whitespace. Photos go in public/images/team/ - see that folder's README.
+export const TEAM: TeamMember[] = [];
+
 export type Testimonial = {
   quote: string;
   name: string;
   role: string;
   initials: string;
   accent: string;
+  /**
+   * Head-and-shoulders photo of the speaker, rooted at public/
+   * (e.g. "/images/team/marek.jpg"). Falls back to the initials disc.
+   *
+   * These cards name a specific person at a specific venue, so this slot takes
+   * an owned photo of that person only - never a stock face.
+   */
+  photo?: string;
 };
 
 // NOTE: Placeholder testimonials, invented for internal review only, and
@@ -502,6 +531,13 @@ export type CaseStudy = {
   authorRole: string;
   accent: string;
   initials: string;
+  /**
+   * Venue photo rooted at public/, e.g. "/images/venues/kalda-interior.jpg".
+   * Falls back to the accent panel with the initials glyph.
+   *
+   * This is captioned with a named venue, so it takes an owned photo of that
+   * venue only - a stock interior here would be a false claim about a client.
+   */
   image?: string;
 };
 
@@ -574,7 +610,16 @@ export const CASE_STUDIES: CaseStudy[] = [
 
 // NOTE: Placeholder venue roster, invented names, rendered as text wordmarks
 // (not fabricated logo art) until a real client roster exists.
-export const CLIENT_LOGOS = [
+export type ClientLogo = {
+  name: string;
+  /**
+   * Real logo artwork rooted at public/, e.g. "/images/logos/kalda.svg".
+   * While absent, LogoMarquee keeps rendering the name as a text wordmark.
+   */
+  logo?: string;
+};
+
+export const CLIENT_LOGOS: ClientLogo[] = [
   { name: "Kalda Kohvik" },
   { name: "Vabaduse Grill" },
   { name: "Telliskivi Lounge" },

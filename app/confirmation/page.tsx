@@ -4,7 +4,8 @@ import { BookButton } from "@/components/BookButton";
 import { Faq } from "@/components/Faq";
 import { Icon } from "@/components/Icons";
 import { Reveal } from "@/components/ui/Reveal";
-import { CONFIRMATION_FAQS, CONFIRMATION_STEPS, NAV, SITE } from "@/lib/content";
+import { Avatar } from "@/components/ui/Avatar";
+import { CONFIRMATION_FAQS, CONFIRMATION_STEPS, NAV, SITE, TEAM } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Audit Submitted",
@@ -111,9 +112,13 @@ export default function ConfirmationPage() {
                   a tool.
                 </p>
                 <figcaption className="mt-4 flex items-center gap-3 border-t border-dashed border-line pt-4">
-                  <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-brand text-xs font-bold text-white">
-                    S
-                  </span>
+                  <Avatar
+                    src={TEAM[0]?.photo}
+                    name={TEAM[0]?.name ?? "The Soch team"}
+                    initials="S"
+                    size={36}
+                    captioned
+                  />
                   <span className="text-[0.8rem] leading-tight text-slate">
                     <span className="block font-semibold text-ink">The Soch team</span>
                     Nothing back in 24 hours?{" "}
