@@ -4,6 +4,9 @@ import { Stats } from "@/components/Stats";
 import { CtaBand } from "@/components/CtaBand";
 import { BookButton } from "@/components/BookButton";
 import { Icon, type IconName } from "@/components/Icons";
+import { Avatar } from "@/components/ui/Avatar";
+import { Photo } from "@/components/ui/Photo";
+import { TEAM } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "About",
@@ -109,9 +112,15 @@ export default function AboutPage() {
                 and easy to order from.&rdquo;
               </p>
               <figcaption className="mt-6 flex items-center gap-3 border-t border-dashed border-line pt-6">
-                <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-brand text-sm font-bold text-white">
-                  S
-                </span>
+                {/* the name is right beside this, so the photo is decorative
+                    here and the fallback disc stays out of the a11y tree */}
+                <Avatar
+                  src={TEAM[0]?.photo}
+                  name={TEAM[0]?.name ?? "The Soch team"}
+                  initials="S"
+                  size={44}
+                  captioned
+                />
                 <span className="leading-tight">
                   <span className="block text-sm font-semibold text-ink">
                     The Soch team
@@ -125,6 +134,58 @@ export default function AboutPage() {
           </Reveal>
         </div>
       </section>
+
+      {/* team - renders nothing at all while TEAM is empty, so the page is
+          never left with a heading over whitespace */}
+      {TEAM.length > 0 && (
+        <section className="border-t border-line bg-mist py-20 sm:py-24 lg:py-28">
+          <div className="container-x">
+            <Reveal className="max-w-2xl">
+              <span className="eyebrow">The team</span>
+              <h2 className="text-h2 mt-5">
+                The people who will actually be running your venue.
+              </h2>
+              <p className="lead mt-5">
+                Not an account manager who forwards your emails to someone else.
+                You will know who is posting, who is answering your reviews, and
+                who to call when something needs changing.
+              </p>
+            </Reveal>
+
+            <div className="mt-14 grid gap-x-12 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+              {TEAM.map((m, i) => (
+                <Reveal key={m.name} delay={(i % 3) * 0.08}>
+                  <Photo
+                    src={m.photo}
+                    alt={`${m.name}, ${m.role} at Soch`}
+                    ratio="1/1"
+                    sizes="(min-width: 1024px) 22rem, (min-width: 640px) 45vw, 100vw"
+                    className="w-full rounded-2xl bg-cream ring-1 ring-line"
+                    fallback={
+                      <div className="flex aspect-square w-full items-center justify-center rounded-2xl bg-cream ring-1 ring-line">
+                        <Avatar
+                          name={m.name}
+                          initials={m.initials}
+                          accent={m.accent}
+                          size={72}
+                          captioned
+                        />
+                      </div>
+                    }
+                  />
+                  <h3 className="text-h3 mt-5">{m.name}</h3>
+                  <p className="mt-1 text-[0.8rem] font-semibold uppercase tracking-[0.1em] text-brand">
+                    {m.role}
+                  </p>
+                  <p className="mt-3 text-[0.975rem] leading-relaxed text-slate">
+                    {m.bio}
+                  </p>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       <Stats />
 

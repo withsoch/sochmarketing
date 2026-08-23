@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Reveal } from "@/components/ui/Reveal";
+import { Photo } from "@/components/ui/Photo";
 import { CASE_STUDIES, type CaseStudy } from "@/lib/content";
 
 export function Testimonials() {
@@ -96,20 +97,22 @@ function Slide({
         className="relative flex min-h-[14rem] flex-col items-start justify-end overflow-hidden p-8 lg:min-h-[28rem]"
         style={{ background: study.accent }}
       >
-        {study.image ? (
-          <img
-            src={study.image}
-            alt={study.company}
-            style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top" }}
-          />
-        ) : (
-          <span
-            className="absolute right-6 top-6 select-none text-[7rem] font-bold leading-none text-white/10"
-            style={{ fontFamily: "var(--font-display)" }}
-          >
-            {study.initials}
-          </span>
-        )}
+        <Photo
+          src={study.image}
+          alt={study.company}
+          sizes="(min-width: 1024px) 40vw, 100vw"
+          className="absolute inset-0"
+          imgClassName="object-top"
+          fallback={
+            <span
+              className="absolute right-6 top-6 select-none text-[7rem] font-bold leading-none text-white/10"
+              style={{ fontFamily: "var(--font-display)" }}
+              aria-hidden="true"
+            >
+              {study.initials}
+            </span>
+          }
+        />
 
         <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "40%", background: "linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%)", borderRadius: "0 0 0 16px" }} />
 

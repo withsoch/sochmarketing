@@ -1,8 +1,30 @@
 // Custom, presentational mini-mockups - one per service category.
 // Same card idiom as the homepage Hero: white rounded-2xl cards, ring-1 ring-line,
-// soft lift shadow, and brand/channel/leaf accents. No stock photography,
-// every "photo" is a flat, CSS-drawn block, honest about being a mockup.
+// soft lift shadow, and brand/channel/leaf accents.
+//
+// The photo slots below take real food/venue photography when a file exists in
+// public/images/food, and fall back to a flat, CSS-drawn block when it doesn't.
+// So these mockups render fine with no assets at all, and get real quality once
+// photos land. Paths live in the FOOD manifest just below.
+import Image from "next/image";
 import { Icon } from "@/components/Icons";
+
+/* ---------- food photo manifest ----------
+   Every entry is optional. Leave a value as undefined (or delete the key) and
+   that slot quietly falls back to its flat colour block. Paths are rooted at
+   public/, so "/images/food/x.jpg" is public/images/food/x.jpg.             */
+
+const FOOD: {
+  listing: (string | undefined)[];   // Google Business Profile photo row (3)
+  grid: (string | undefined)[];      // AI-content monthly image grid (5)
+  websiteHero: string | undefined;   // one-page website hero
+  dishes: (string | undefined)[];    // delivery-app dish thumbnails (3)
+} = {
+  listing: [undefined, undefined, undefined],
+  grid: [undefined, undefined, undefined, undefined, undefined],
+  websiteHero: undefined,
+  dishes: [undefined, undefined, undefined],
+};
 
 /* ---------- shared primitives ---------- */
 
@@ -19,21 +41,40 @@ function ChannelDot({ color }: { color: string }) {
   return <span className="h-2 w-2 shrink-0 rounded-full" style={{ background: color }} />;
 }
 
-/** A flat, CSS-drawn stand-in for a food/venue photo, never a real image. */
+/**
+ * A food/venue photo slot. Renders the real image when `src` is set, otherwise
+ * the flat CSS-drawn block the mockups used before any photography existed.
+ *
+ * These sit inside a fake Google listing / Wolt menu / image grid, so they are
+ * decorative: alt is empty by default and screen readers skip them. The
+ * surrounding mockup text already carries the meaning.
+ *
+ * `relative` is always on the wrapper - next/image with `fill` needs a
+ * positioned parent or it escapes the box.
+ */
 function PhotoBlock({
   tone = "var(--color-peach)",
   className = "",
+  src,
+  alt = "",
+  sizes = "120px",
   children,
 }: {
   tone?: string;
   className?: string;
+  src?: string;
+  alt?: string;
+  sizes?: string;
   children?: React.ReactNode;
 }) {
   return (
     <div
-      className={`flex items-center justify-center overflow-hidden rounded-lg ${className}`}
+      className={`relative flex items-center justify-center overflow-hidden rounded-lg ${className}`}
       style={{ background: tone }}
     >
+      {src && (
+        <Image src={src} alt={alt} fill sizes={sizes} className="object-cover" />
+      )}
       {children}
     </div>
   );
@@ -104,7 +145,7 @@ function GoogleVisual() {
         </div>
         <div className="mt-4 grid grid-cols-3 gap-2">
           {["var(--color-peach)", "var(--color-cream)", "var(--color-mist)"].map((t, i) => (
-            <PhotoBlock key={i} tone={t} className="h-12" />
+            <PhotoBlock key={i} tone={t} className="h-12" src={FOOD.listing[i]} sizes="120px" />
           ))}
         </div>
         <div className="mt-3.5 flex items-center justify-between border-t border-dashed border-line pt-3 text-[0.7rem] text-slate">
@@ -164,8 +205,12 @@ function AiContentVisual() {
         <div className="mt-3.5 grid grid-cols-3 gap-2">
           {["var(--color-peach)", "var(--color-mist)", "var(--color-cream)", "var(--color-cream)", "var(--color-peach)"].map(
             (t, i) => (
-              <PhotoBlock key={i} tone={t} className="aspect-square">
-                {i === 4 && <Icon name="image" className="h-4 w-4 text-muted" strokeWidth={1.6} />}
+              <PhotoBlock key={i} tone={t} className="aspect-square" src={FOOD.grid[i]} sizes="112px">
+                {/* the icon is a hint that this is an image slot - drop it once a
+                    real photo fills the cell, or it sits on top of the food */}
+                {i === 4 && !FOOD.grid[i] && (
+                  <Icon name="image" className="h-4 w-4 text-muted" strokeWidth={1.6} />
+                )}
               </PhotoBlock>
             ),
           )}
@@ -193,7 +238,12 @@ function FoundationsVisual() {
           <span className="ml-2 truncate text-[0.65rem] text-muted">yourvenue.com</span>
         </div>
         <div className="p-4">
-          <PhotoBlock tone="var(--color-peach)" className="h-16 w-full" />
+          <PhotoBlock
+            tone="var(--color-peach)"
+            className="h-16 w-full"
+            src={FOOD.websiteHero}
+            sizes="320px"
+          />
           <div className="mt-3 h-2.5 w-2/3 rounded-full bg-line" />
           <div className="mt-2 h-2 w-1/2 rounded-full bg-line/70" />
           <div className="mt-3.5 flex gap-2">
@@ -230,9 +280,14 @@ function DeliveryVisual() {
           <Icon name="bag" className="h-4 w-4 text-brand" strokeWidth={1.7} />
         </div>
         <div className="mt-3.5 space-y-2.5">
-          {items.map((it) => (
+          {items.map((it, i) => (
             <div key={it.name} className="flex items-center gap-3">
-              <PhotoBlock tone="var(--color-cream)" className="h-10 w-10 shrink-0" />
+              <PhotoBlock
+                tone="var(--color-cream)"
+                className="h-10 w-10 shrink-0"
+                src={FOOD.dishes[i]}
+                sizes="40px"
+              />
               <div className="min-w-0 flex-1">
                 <p className="truncate text-[0.78rem] font-medium text-ink-soft">{it.name}</p>
                 {it.tag && (
