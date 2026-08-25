@@ -110,7 +110,7 @@ const GOOGLE_GALLERY: { src: string; alt: string }[] = [
     alt: "Google Maps visibility optimization graphic",
   },
   {
-    src: "/Service Images/google-show-up-when-someone-two-streets-a.png",
+    src: "/Service Images/google-show-up-when-someone-two-streets-away-searches-for-dinner-.png",
     alt: "Restaurant visibility when searched nearby",
   },
 ];
