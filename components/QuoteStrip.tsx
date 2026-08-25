@@ -1,4 +1,5 @@
 import { Reveal } from "@/components/ui/Reveal";
+import { Avatar } from "@/components/ui/Avatar";
 import { TESTIMONIALS } from "@/lib/content";
 
 /**
@@ -22,12 +23,14 @@ export function QuoteStrip() {
                   &ldquo;{t.quote}&rdquo;
                 </blockquote>
                 <figcaption className="mt-5 flex items-center gap-3 border-t border-dashed border-line pt-4">
-                  <span
-                    className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-xs font-bold text-white"
-                    style={{ background: t.accent }}
-                  >
-                    {t.initials}
-                  </span>
+                  <Avatar
+                    src={t.photo}
+                    name={t.name}
+                    initials={t.initials}
+                    accent={t.accent}
+                    size={36}
+                    captioned
+                  />
                   <span className="leading-tight">
                     <span className="block text-sm font-semibold text-ink">{t.name}</span>
                     <span className="block text-xs text-muted">{t.role}</span>
