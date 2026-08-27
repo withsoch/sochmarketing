@@ -34,8 +34,8 @@ export const metadata: Metadata = {
     apple: "/logos/favicon-icon.png",
   },
   title: {
-    default: "Soch: Marketing for Restaurant, Cafe & Lounge Owners",
-    template: "%s · Soch",
+    default: "Marketing for Restaurant, Cafe & Lounge Owners",
+    template: "%s",
   },
   description:
     "We run Instagram, Google, review replies and your Wolt or Bolt Food listing, for restaurants, cafes and shisha lounges. You approve every post. Packages from €290/month, starting in Tallinn.",
