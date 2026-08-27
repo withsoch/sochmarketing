@@ -5,7 +5,7 @@ import { Faq } from "@/components/Faq";
 import { Icon } from "@/components/Icons";
 import { Reveal } from "@/components/ui/Reveal";
 import { Avatar } from "@/components/ui/Avatar";
-import { CONFIRMATION_FAQS, CONFIRMATION_STEPS, NAV, SITE, TEAM } from "@/lib/content";
+import { CONFIRMATION_FAQS, CONFIRMATION_STEPS, NAV, SITE } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Audit Submitted",
@@ -45,13 +45,16 @@ export default function ConfirmationPage() {
               </p>
             </div>
 
-            <div className="shrink-0 lg:text-right">
-              <p className="text-[0.8rem] text-white/55">Don&apos;t want to wait?</p>
-              <div className="mt-3">
-                <BookButton variant="primary" size="lg" arrow>
-                  Get a quote now
-                </BookButton>
-              </div>
+            <div className="w-full shrink-0 rounded-2xl border border-white/15 bg-white/[0.04] p-6 sm:p-7 lg:w-[300px]">
+              <p className="text-[0.7rem] font-semibold uppercase tracking-[0.1em] text-white/50">
+                Don&apos;t want to wait?
+              </p>
+              <p className="mt-2 text-[0.95rem] leading-snug text-white/70">
+                Skip the inbox and talk it through with us now.
+              </p>
+              <BookButton variant="primary" size="lg" arrow className="mt-5 w-full justify-center">
+                Get a quote now
+              </BookButton>
             </div>
           </div>
         </div>
@@ -113,10 +116,11 @@ export default function ConfirmationPage() {
                 </p>
                 <figcaption className="mt-4 flex items-center gap-3 border-t border-dashed border-line pt-4">
                   <Avatar
-                    src={TEAM[0]?.photo}
-                    name={TEAM[0]?.name ?? "The Soch team"}
-                    initials="S"
-                    size={36}
+                    src="/images/team/rizwan-founder.webp"
+                    name="Rizwan, Soch founder"
+                    initials="R"
+                    size={52}
+                    objectPosition="50% 20%"
                     captioned
                   />
                   <span className="text-[0.8rem] leading-tight text-slate">
