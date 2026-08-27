@@ -350,7 +350,7 @@ function FoundationsVisual() {
           <p className="text-center text-[0.65rem] leading-snug text-muted">
             Inviting café interior representing strong foundations
           </p>
-          <p className="mt-3.5 text-sm font-semibold text-ink">Your Restaurant Name</p>
+          <p className="mt-3.5 text-sm font-semibold text-ink">Kalda Kohvik</p>
           <p className="mt-0.5 text-[0.72rem] text-muted">
             Open today · 11:00–23:00 · Tallinn, Estonia
           </p>

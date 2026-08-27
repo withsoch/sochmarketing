@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { ServicesShowcase } from "@/components/ServicesShowcase";
-import { ServicesOverview } from "@/components/ServicesOverview";
 import { BookButton } from "@/components/BookButton";
 import { CtaBand } from "@/components/CtaBand";
 import { Reveal } from "@/components/ui/Reveal";
@@ -22,8 +22,8 @@ export default function ServicesPage() {
     <>
       <section className="border-b border-line bg-mist">
         <div className="container-x py-16 sm:py-20 lg:py-24">
-          <div className="grid items-center gap-12 lg:grid-cols-[1fr_0.88fr] lg:gap-16">
-            <div className="max-w-xl">
+          <div className="grid items-stretch gap-12 lg:grid-cols-2 lg:gap-16">
+            <div className="flex max-w-xl flex-col justify-center">
               <Reveal delay={0}>
                 <span className="eyebrow">Services</span>
               </Reveal>
@@ -76,8 +76,17 @@ export default function ServicesPage() {
               </Reveal>
             </div>
 
-            <Reveal delay={0.15} className="lg:pl-6">
-              <ServicesOverview />
+            <Reveal delay={0.15} className="h-full">
+              <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl lg:aspect-auto lg:h-full lg:min-h-[480px]">
+                <Image
+                  src="/Service Images/foundations-hero-collage.png"
+                  alt="Food and café collage representing service foundations"
+                  fill
+                  priority
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  className="object-cover"
+                />
+              </div>
             </Reveal>
           </div>
         </div>

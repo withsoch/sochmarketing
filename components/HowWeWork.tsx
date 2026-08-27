@@ -9,11 +9,10 @@ export function HowWeWork() {
       <div className="container-x">
         <div className="flex flex-col items-start justify-between gap-6 lg:flex-row lg:items-end">
           <div className="max-w-2xl">
-            <h2 className="text-h2">Four steps. Your time, stated upfront.</h2>
+            <h2 className="text-h2">Four steps.</h2>
             <p className="lead mt-5">
               We do the work. You stay in control and spend under an hour a
-              month on it. Here&apos;s the whole process, and what each step
-              needs from you.
+              month on it. Here&apos;s the whole process:
             </p>
           </div>
         </div>
@@ -32,7 +31,17 @@ export function HowWeWork() {
                 <span className="h-px flex-1 bg-line" />
                 <Icon name={step.icon} className="h-5 w-5 text-brand" strokeWidth={1.6} />
               </div>
-              <h3 className="text-h3 mt-4">{step.title}</h3>
+              <h3 className="text-h3 mt-4">
+                {step.no === "01" ? (
+                  <>
+                    Audit &amp;
+                    <br />
+                    Quick Wins
+                  </>
+                ) : (
+                  step.title
+                )}
+              </h3>
               <p className="mt-2.5 text-[0.95rem] leading-relaxed text-slate">
                 {step.description}
               </p>

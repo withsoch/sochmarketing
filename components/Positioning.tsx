@@ -26,7 +26,7 @@ export function Positioning() {
       <div className="container-x">
         <Reveal className="max-w-3xl">
           <h2 className="text-h2">
-            Your customers already picked where to eat. Not always you.
+            Your customers already picked where to eat, and it's not always you!
           </h2>
           <p className="lead mt-5">
             They decided on Google, on Instagram, in the Wolt app, before

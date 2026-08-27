@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { BookButton } from "@/components/BookButton";
 import { PackageCard } from "@/components/PackageCard";
 import { CtaBand } from "@/components/CtaBand";
 import { Faq } from "@/components/Faq";
 import { Reveal } from "@/components/ui/Reveal";
-import { PACKAGES, PACKAGE_TERMS, PACKAGE_FINE_PRINT, PRICING_FAQS } from "@/lib/content";
+import { PACKAGES, PACKAGE_TERMS, PRICING_FAQS } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Packages & Pricing for Restaurants & Cafes",
@@ -21,8 +22,8 @@ export default function PackagesPage() {
       {/* ── HERO ──────────────────────────────────────────────────── */}
       <section className="border-b border-line bg-mist">
         <div className="container-x py-16 sm:py-20 lg:py-24">
-          <div className="grid items-start gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
-            <div className="max-w-xl">
+          <div className="grid items-stretch gap-12 lg:grid-cols-2 lg:gap-16">
+            <div className="flex max-w-xl flex-col justify-center">
               <Reveal delay={0}>
                 <span className="eyebrow">Packages</span>
               </Reveal>
@@ -30,7 +31,7 @@ export default function PackagesPage() {
               <Reveal delay={0.05}>
                 <h1 className="text-display mt-5 text-[clamp(2.3rem,1.4rem+3vw,3.6rem)]">
                   Five packages.{" "}
-                  <span className="italic text-brand">One goal: more covers.</span>
+                  <span className="italic text-brand">One goal: more orders.</span>
                 </h1>
               </Reveal>
 
@@ -51,7 +52,7 @@ export default function PackagesPage() {
               </Reveal>
 
               <Reveal delay={0.2}>
-                <dl className="mt-10 grid grid-cols-3 gap-6 border-t border-dashed border-line pt-7">
+                <dl className="mt-10 grid grid-cols-2 gap-6 border-t border-dashed border-line pt-7">
                   {PACKAGE_TERMS.map((t) => (
                     <div key={t.label}>
                       <dt className="sr-only">{t.label}</dt>
@@ -72,39 +73,17 @@ export default function PackagesPage() {
               </Reveal>
             </div>
 
-            {/* jump index */}
-            <Reveal delay={0.15} className="lg:pl-6">
-              <div className="mx-auto w-full max-w-[26rem] rounded-2xl border border-line bg-white shadow-[var(--shadow-card)] lg:max-w-none">
-                <div className="px-6 pb-4 pt-6 sm:px-7">
-                  <p className="text-[0.7rem] font-semibold uppercase tracking-[0.12em] text-muted">
-                    Starting from, excl. VAT
-                  </p>
-                </div>
-                <ul className="border-t border-line">
-                  {PACKAGES.map((p) => (
-                    <li key={p.slug} className="border-b border-line last:border-b-0">
-                      <a
-                        href={`#${p.slug}`}
-                        className="flex items-center justify-between gap-4 px-6 py-3.5 transition-colors hover:bg-mist sm:px-7"
-                      >
-                        <span className="text-[0.95rem] font-medium text-ink-soft">
-                          {p.name}
-                          {p.popular && (
-                            <span className="ml-2 rounded-full bg-peach px-2 py-0.5 text-[0.62rem] font-semibold text-brand-dark">
-                              Popular
-                            </span>
-                          )}
-                        </span>
-                        <span
-                          className="shrink-0 text-[0.95rem] font-semibold text-ink"
-                          style={{ fontVariantNumeric: "tabular-nums" }}
-                        >
-                          {p.monthly}/mo
-                        </span>
-                      </a>
-                    </li>
-                  ))}
-                </ul>
+            {/* café image */}
+            <Reveal delay={0.15} className="h-full">
+              <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl lg:aspect-auto lg:h-full lg:min-h-[480px]">
+                <Image
+                  src="/Service Images/packages-hero-cafe.png"
+                  alt="Cozy café interior with warm lighting and people dining"
+                  fill
+                  priority
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  className="object-cover"
+                />
               </div>
             </Reveal>
           </div>
@@ -146,33 +125,15 @@ export default function PackagesPage() {
             </p>
           </Reveal>
 
-          <div className="mt-12 grid gap-6 lg:grid-cols-2 lg:items-start">
+          <div className="mt-12 grid items-stretch gap-6 lg:grid-cols-2">
             {SPECIALIST.map((p, i) => (
-              <div key={p.slug} id={p.slug} className="scroll-mt-32">
-                <Reveal delay={i * 0.08}>
+              <div key={p.slug} id={p.slug} className="h-full scroll-mt-32">
+                <Reveal delay={i * 0.08} className="h-full">
                   <PackageCard pkg={p} dark={p.slug === "full"} />
                 </Reveal>
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* ── FINE PRINT ────────────────────────────────────────────── */}
-      <section className="bg-white py-14 sm:py-16">
-        <div className="container-x">
-          <Reveal className="rounded-2xl border border-line bg-mist p-7 sm:p-8">
-            <p className="text-[0.7rem] font-semibold uppercase tracking-[0.1em] text-muted">
-              The fine print
-            </p>
-            <ul className="mt-4 grid gap-x-10 gap-y-2.5 sm:grid-cols-2">
-              {PACKAGE_FINE_PRINT.map((f) => (
-                <li key={f} className="text-[0.85rem] leading-relaxed text-slate">
-                  {f}
-                </li>
-              ))}
-            </ul>
-          </Reveal>
         </div>
       </section>
 

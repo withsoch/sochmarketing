@@ -15,9 +15,9 @@ export const HERO = {
 export const SITE = {
   name: "Soch",
   tagline:
-    "Instagram, Google, reviews and delivery-app marketing for restaurants, cafes and shisha lounges. Starting in Tallinn.",
+    "Instagram, Google, reviews and delivery-app marketing for restaurants, cafes and shisha lounges.",
   // Placeholder contact details, replace before launch.
-  email: "hello@soch.co",
+  email: "hello@soovita.com",
   linkedin: "https://www.linkedin.com/company/soch/",
 };
 
@@ -366,7 +366,6 @@ export const PACKAGES: Package[] = [
 export const PACKAGE_TERMS = [
   { value: "6 mo", label: "Minimum term, then 30 days' notice" },
   { value: "100%", label: "Posts approved by you before going live" },
-  { value: "excl. VAT", label: "Every price on this page, always" },
 ];
 
 export const PACKAGE_FINE_PRINT = [
@@ -419,28 +418,28 @@ export const STEPS: Step[] = [
     icon: "audit",
     title: "Audit & Quick Wins",
     description:
-      "We read your Instagram, your Google listing and your delivery apps by hand, then fix the free things first, the ones that change how you show up this week. From you: the logins, and about 30 minutes on a call while we ask what actually sells.",
+      "We read your Instagram, your Google listing and your delivery apps by hand, then fix the free things first, the ones that change how you show up this week.",
   },
   {
     no: "02",
     icon: "pin",
     title: "Get Found on Google",
     description:
-      "We claim, verify and fill out your Google Business Profile, so the person searching for dinner two streets away sees you. From you: nothing, unless Google posts a verification card to the venue. Then five minutes to read us the code.",
+      "We claim, verify and fill out your Google Business Profile, so the person searching for dinner two streets away sees you.",
   },
   {
     no: "03",
     icon: "image",
     title: "Look Active, Every Week",
     description:
-      "Photos, posts, stories and review replies on a fixed schedule, written for your venue in Estonian and English. From you: about 20 minutes a month approving the calendar, on your phone, between services.",
+      "Photos, posts, stories and review replies on a fixed schedule, written for your venue in Estonian and English.",
   },
   {
     no: "04",
     icon: "trend",
     title: "Turn Views Into Orders",
     description:
-      "Delivery listings rebuilt, review cards on the tables, and a one-page report showing directions requested and orders placed. From you: 15 minutes reading it, and a word with your staff about the cards.",
+      "Delivery listings rebuilt, review cards on the tables, and a one-page report showing directions requested and orders placed.",
   },
 ];
 

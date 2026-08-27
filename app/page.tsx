@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <Reveal><LogoMarquee /></Reveal>
+      {/* <Reveal><LogoMarquee /></Reveal> */}
       <Reveal><PlatformStrip /></Reveal>
       <Reveal><Positioning /></Reveal>
       <Reveal><ServicesGrid /></Reveal>

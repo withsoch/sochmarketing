@@ -39,8 +39,8 @@
   --color-channel-facebook: #1877f2;
   --color-channel-tiktok: #1a1a1a;
   --color-channel-google: #4285f4;
-  --color-channel-wolt: #009de0;
-  --color-channel-bolt: #34d1a4;
+  --color-channel-wolt: #00c2e8;
+  --color-channel-bolt: #34d186;
 
   /* Fonts */
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;

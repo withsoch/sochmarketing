@@ -13,8 +13,8 @@ export function PackagesPreview() {
             <h2 className="text-h2">Packages, starting from €290/month.</h2>
             <p className="lead mt-5">
               Five packages, one goal: look open, get found, get more orders.
-              All prices excl. VAT. See the full detail and the two
-              specialist tracks on the packages page.
+              See the full detail and the two specialist tracks on the
+              packages page.
             </p>
           </div>
           <Button href="/packages" variant="dark" arrow className="shrink-0">
@@ -49,7 +49,7 @@ export function PackagesPreview() {
                   </span>
                   <span className="ml-1 text-[0.85rem] font-medium text-muted">/month</span>
                 </p>
-                <p className="mt-1 text-[0.75rem] text-muted">Starting from, excl. VAT</p>
+                <p className="mt-1 text-[0.75rem] text-muted">Starting from</p>
               </div>
             </Reveal>
           ))}

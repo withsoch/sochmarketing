@@ -2,7 +2,6 @@ import Link from "next/link";
 import { Logo } from "@/components/Logo";
 import { Icon } from "@/components/Icons";
 import { NAV, SERVICE_CATEGORIES, SITE } from "@/lib/content";
-import { PLATFORMS } from "@/lib/channels";
 import { AuditFooterLink } from "@/components/AuditFooterLink";
 import { BookFooterLink } from "@/components/BookFooterLink";
 
@@ -11,7 +10,7 @@ export function Footer() {
     <footer className="bg-charcoal text-white/70">
       <div className="container-x">
         {/* link columns */}
-        <div className="grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-[1.3fr_0.85fr_1.15fr_0.85fr_1fr]">
+        <div className="grid gap-8 py-10 sm:grid-cols-2 lg:grid-cols-[1.3fr_0.85fr_1.15fr_1fr]">
           <div className="max-w-xs">
             <Logo variant="light" />
             <p className="mt-4 text-sm leading-relaxed text-white/60">
@@ -35,15 +34,6 @@ export function Footer() {
             ))}
           </FooterCol>
 
-          <FooterCol title="Platforms">
-            {/* Plain text, not links. There are no per-platform pages. */}
-            {PLATFORMS.map((p) => (
-              <li key={p.id} className="text-sm text-white/60">
-                {p.name}
-              </li>
-            ))}
-          </FooterCol>
-
           <FooterCol title="Get started">
             <BookFooterLink />
             <AuditFooterLink />
@@ -52,10 +42,7 @@ export function Footer() {
         </div>
 
         {/* bottom bar */}
-        <div className="flex flex-col items-center justify-between gap-4 border-t border-white/10 py-6 text-sm sm:flex-row">
-          <p className="text-white/50">
-            © {SITE.name}. All rights reserved.
-          </p>
+        <div className="flex flex-col items-center justify-end gap-4 border-t border-white/10 py-4 text-sm sm:flex-row">
           <div className="flex items-center gap-3">
             <a
               href={SITE.linkedin}
@@ -79,7 +66,7 @@ function FooterCol({ title, children }: { title: string; children: React.ReactNo
       <h3 className="text-sm font-semibold uppercase tracking-wider text-white">
         {title}
       </h3>
-      <ul className="mt-4 flex flex-col gap-2.5">{children}</ul>
+      <ul className="mt-3 flex flex-col gap-2">{children}</ul>
     </div>
   );
 }

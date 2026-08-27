@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Reveal } from "@/components/ui/Reveal";
 import { Stats } from "@/components/Stats";
 import { CtaBand } from "@/components/CtaBand";
@@ -42,31 +43,44 @@ export default function AboutPage() {
     <>
       <section className="border-b border-line bg-mist">
         <div className="container-x py-16 sm:py-20 lg:py-24">
-          <div className="max-w-3xl">
-            <Reveal delay={0}>
-              <span className="eyebrow">About Soch</span>
-            </Reveal>
-            <Reveal delay={0.05}>
-              <h1 className="text-display mt-5 text-[clamp(2.5rem,1.5rem+3.2vw,3.9rem)]">
-                Built for restaurants, not for everyone.
-              </h1>
-            </Reveal>
-            <Reveal delay={0.1}>
-              <p className="lead mt-6 max-w-2xl">
-                Most marketing agencies serve everyone: software companies,
-                shops, consultants and restaurants, with the same generic
-                playbook. We built Soch around one kind of business.
-                Restaurants, cafes and shisha lounges, starting with a pilot
-                in Tallinn, because a grill or a lounge needs its Google
-                listing and its Wolt menu handled properly, not a content
-                calendar borrowed from a software company.
-              </p>
-            </Reveal>
-            <Reveal delay={0.15}>
-              <div className="mt-8">
-                <BookButton variant="primary" size="lg" arrow>
-                  Get a quote
-                </BookButton>
+          <div className="grid items-stretch gap-12 lg:grid-cols-2 lg:gap-16">
+            <div className="flex max-w-xl flex-col justify-center">
+              <Reveal delay={0.05}>
+                <h1 className="text-display text-[clamp(2.5rem,1.5rem+3.2vw,3.9rem)]">
+                  Built only for restaurant &amp; cafes like yours
+                </h1>
+              </Reveal>
+              <Reveal delay={0.1}>
+                <p className="lead mt-6 max-w-2xl">
+                  Most marketing agencies serve everyone: software companies,
+                  shops, consultants and restaurants, with the same generic
+                  playbook. We built Soch around one kind of business.
+                  Restaurants, cafes and shisha lounges, starting with a pilot
+                  in Tallinn, because a grill or a lounge needs its Google
+                  listing and its Wolt menu handled properly, not a content
+                  calendar borrowed from a software company.
+                </p>
+              </Reveal>
+              <Reveal delay={0.15}>
+                <div className="mt-8">
+                  <BookButton variant="primary" size="lg" arrow>
+                    Get a quote
+                  </BookButton>
+                </div>
+              </Reveal>
+            </div>
+
+            {/* café image */}
+            <Reveal delay={0.15} className="h-full">
+              <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl lg:aspect-auto lg:h-full lg:min-h-[480px]">
+                <Image
+                  src="/Service Images/about-hero-restaurant-cafe.png"
+                  alt="Cozy restaurant café interior with warm sunlight and dining table"
+                  fill
+                  priority
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  className="object-cover"
+                />
               </div>
             </Reveal>
           </div>
@@ -115,11 +129,12 @@ export default function AboutPage() {
                 {/* the name is right beside this, so the photo is decorative
                     here and the fallback disc stays out of the a11y tree */}
                 <Avatar
-                  src={TEAM[0]?.photo}
+                  src="https://cdn.prod.website-files.com/68e7ded517d0693d2c345250/694e751734d7a4afc68e2e60_Rizwan%20founder.webp"
                   name={TEAM[0]?.name ?? "The Soch team"}
                   initials="S"
-                  size={44}
+                  size={64}
                   captioned
+                  objectPosition="50% 20%"
                 />
                 <span className="leading-tight">
                   <span className="block text-sm font-semibold text-ink">
@@ -208,21 +223,6 @@ export default function AboutPage() {
               </Reveal>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* why Tallinn first */}
-      <section className="bg-white py-20 sm:py-24 lg:py-28">
-        <div className="container-x">
-          <Reveal className="max-w-2xl">
-            <h2 className="text-h2">Why we started in Tallinn.</h2>
-            <p className="lead mt-5">
-              We&apos;re piloting Soch with a limited number of restaurants,
-              cafes and shisha lounges in Tallinn before we take on more.
-              That means closer attention per venue while we prove this
-              works, not a rollout across a city we don&apos;t actually know.
-            </p>
-          </Reveal>
         </div>
       </section>
 

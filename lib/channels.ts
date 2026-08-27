@@ -29,8 +29,9 @@ export const CHANNEL_VAR: Record<Channel, string> = {
  * full-strength mark, since a faded logo reads as "broken", not "optional".
  *
  * `mark` picks how the logo is drawn (see components/PlatformIcons.tsx):
- * a real brand glyph, or an initial on the brand colour for the two
- * wordmark-only delivery brands.
+ * a real brand glyph, traced or extracted from each platform's own
+ * artwork. Bolt is the one exception — PlatformMark renders it straight
+ * from public/logos/Bolt_logo.png regardless of this field.
  */
 export const PLATFORMS: {
   id: Channel;
@@ -72,13 +73,13 @@ export const PLATFORMS: {
     name: "Wolt",
     role: "Delivery listing",
     primary: false,
-    mark: "monogram",
+    mark: "glyph",
   },
   {
     id: "bolt",
     name: "Bolt Food",
     role: "Delivery listing",
     primary: false,
-    mark: "monogram",
+    mark: "glyph",
   },
 ];

@@ -17,6 +17,8 @@ type AvatarProps = {
    * case in a <figcaption>. Keeps a screen reader from announcing it twice.
    */
   captioned?: boolean;
+  /** CSS object-position for the photo, e.g. "50% 20%" to favour the top of the frame. */
+  objectPosition?: string;
 };
 
 /**
@@ -32,6 +34,7 @@ export function Avatar({
   size = 44,
   className = "",
   captioned = false,
+  objectPosition = "center",
 }: AvatarProps) {
   const box = { width: size, height: size };
 
@@ -47,6 +50,7 @@ export function Avatar({
           fill
           sizes={`${size}px`}
           className="object-cover"
+          style={{ objectPosition }}
         />
       </span>
     );
