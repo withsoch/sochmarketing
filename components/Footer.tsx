@@ -12,7 +12,7 @@ export function Footer() {
         {/* link columns */}
         <div className="grid gap-8 py-10 sm:grid-cols-2 lg:grid-cols-[1.3fr_0.85fr_1.15fr_1fr]">
           <div className="max-w-xs">
-            <Logo variant="light" />
+            <Logo variant="light" imgClassName="h-8 w-auto" />
             <p className="mt-4 text-sm leading-relaxed text-white/60">
               {SITE.tagline}
             </p>

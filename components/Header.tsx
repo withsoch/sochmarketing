@@ -36,7 +36,7 @@ export function Header() {
       }`}
     >
       <div className="container-x flex h-[4.5rem] items-center justify-between gap-4">
-        <Logo />
+        <Logo imgClassName="h-8 w-auto" />
 
         <nav className="hidden items-center gap-1 md:flex">
           {NAV.map((item) => {

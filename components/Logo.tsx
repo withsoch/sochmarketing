@@ -8,15 +8,17 @@ import Link from "next/link";
 // as specified; swap the two src paths below if the navbar/footer render
 // with the wrong contrast.
 const LOGO_SRC = {
-  dark: "/logos/soch-logo-light.png",
-  light: "/logos/soch-logo-dark.png",
+  dark: "/logos/Sovita-logo-removebg-preview.png",
+  light: "/logos/Sovita-logo-white.png",
 };
 
 export function Logo({
   className = "",
+  imgClassName = "h-12 w-auto",
   variant = "dark",
 }: {
   className?: string;
+  imgClassName?: string;
   variant?: "dark" | "light";
 }) {
   // "dark" variant = navbar; "light" variant = footer
@@ -32,7 +34,7 @@ export function Logo({
         width={1000}
         height={250}
         priority
-        className="h-12 w-auto"
+        className={imgClassName}
       />
     </Link>
   );
