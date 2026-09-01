@@ -17,7 +17,7 @@ export const SITE = {
   tagline:
     "Instagram, Google, reviews and delivery-app marketing for restaurants, cafes and shisha lounges.",
   // Placeholder contact details, replace before launch.
-  email: "hello@soovita.com",
+  email: "riz@soovita.com",
   linkedin: "https://www.linkedin.com/company/soch/",
 };
 
@@ -28,7 +28,8 @@ export const SITE = {
  * NEXT_PUBLIC_BOOKING_URL to override without a code change.
  */
 export const BOOKING_URL =
-  process.env.NEXT_PUBLIC_BOOKING_URL ?? "https://cal.com/soch/30min";
+  process.env.NEXT_PUBLIC_BOOKING_URL ??
+  "https://cal.com/consult-with-riz/marketing-discovery-call";
 
 /**
  * Where the CTAs send people to schedule via an embedded calendar.
@@ -687,7 +688,7 @@ export const AUDIT_FAQS: FaqItem[] = [
   },
   {
     q: "How long does it take?",
-    a: "The report lands within 24 hours of you sending it. If it's been longer, email hello@soch.co and we'll chase it. A person reads every submission, so now and then one gets stuck behind another.",
+    a: "The report lands within 24 hours of you sending it. If it's been longer, email riz@soovita.com and we'll chase it. A person reads every submission, so now and then one gets stuck behind another.",
   },
   {
     q: "Will this just be a pitch?",

@@ -196,10 +196,10 @@ export default function AuditPage() {
               <p className="mt-5 text-[0.975rem] leading-relaxed text-slate">
                 Anything still unclear, email{" "}
                 <a
-                  href="mailto:hello@soch.co"
+                  href="mailto:riz@soovita.com"
                   className="font-semibold text-brand-dark underline underline-offset-4"
                 >
-                  hello@soch.co
+                  riz@soovita.com
                 </a>
                 .
               </p>
