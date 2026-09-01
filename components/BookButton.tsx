@@ -1,5 +1,8 @@
+"use client";
+
 import { Icon } from "@/components/Icons";
-import { BOOKING_URL } from "@/lib/content";
+import { BOOKING_URL, CAL_LINK } from "@/lib/content";
+import { openCalModal } from "@/lib/calEmbed";
 
 type Variant = "primary" | "secondary" | "dark" | "light";
 type Size = "md" | "lg";
@@ -32,11 +35,20 @@ export function BookButton({
   className = "",
 }: Props) {
   const cls = `group inline-flex cursor-pointer items-center justify-center gap-2 rounded-lg font-semibold transition-colors duration-200 ${variants[variant]} ${sizes[size]} ${className}`;
+  const calLink = CAL_LINK;
   return (
     <a
       href={BOOKING_URL}
-      target="_blank"
-      rel="noopener noreferrer"
+      target={calLink ? undefined : "_blank"}
+      rel={calLink ? undefined : "noopener noreferrer"}
+      onClick={
+        calLink
+          ? (e) => {
+              e.preventDefault();
+              openCalModal(calLink);
+            }
+          : undefined
+      }
       className={cls}
     >
       {children}
