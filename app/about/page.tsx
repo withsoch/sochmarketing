@@ -12,7 +12,7 @@ import { TEAM } from "@/lib/content";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Soch runs Instagram, Google, reviews and delivery listings for restaurant, cafe and shisha lounge owners. Starting with a pilot in Tallinn.",
+    "Soovita runs Instagram, Google, reviews and delivery listings for restaurant, cafe and shisha lounge owners. Starting with a pilot in Tallinn.",
 };
 
 const VALUES: { icon: IconName; title: string; body: string }[] = [
@@ -54,7 +54,7 @@ export default function AboutPage() {
                 <p className="lead mt-6 max-w-2xl">
                   Most marketing agencies serve everyone: software companies,
                   shops, consultants and restaurants, with the same generic
-                  playbook. We built Soch around one kind of business.
+                  playbook. We built Soovita around one kind of business.
                   Restaurants, cafes and shisha lounges, starting with a pilot
                   in Tallinn, because a grill or a lounge needs its Google
                   listing and its Wolt menu handled properly, not a content
@@ -110,7 +110,7 @@ export default function AboutPage() {
                 reviews and delivery apps as seriously as the Instagram feed.
               </p>
               <p className="font-medium text-ink">
-                Soch was built to do that work, for restaurants specifically.
+                Soovita was built to do that work, for restaurants specifically.
               </p>
             </div>
           </Reveal>
@@ -130,7 +130,7 @@ export default function AboutPage() {
                     here and the fallback disc stays out of the a11y tree */}
                 <Avatar
                   src="https://cdn.prod.website-files.com/68e7ded517d0693d2c345250/694e751734d7a4afc68e2e60_Rizwan%20founder.webp"
-                  name={TEAM[0]?.name ?? "The Soch team"}
+                  name={TEAM[0]?.name ?? "The Soovita team"}
                   initials="S"
                   size={64}
                   captioned
@@ -138,7 +138,7 @@ export default function AboutPage() {
                 />
                 <span className="leading-tight">
                   <span className="block text-sm font-semibold text-ink">
-                    The Soch team
+                    The Soovita team
                   </span>
                   <span className="block text-xs text-muted">
                     Your restaurant marketing partners

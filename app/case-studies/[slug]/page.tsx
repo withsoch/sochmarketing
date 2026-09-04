@@ -18,8 +18,8 @@ export async function generateMetadata({
   const study = CASE_STUDIES.find((s) => s.slug === slug);
   if (!study) return {};
   return {
-    title: `${study.company} | Soch Case Study`,
-    description: `Illustrative results from a Soch engagement: ${study.scope}. ${study.metrics.map((m) => `${m.value} ${m.label}`).join(", ")}.`,
+    title: `${study.company} | Soovita Case Study`,
+    description: `Illustrative results from a Soovita engagement: ${study.scope}. ${study.metrics.map((m) => `${m.value} ${m.label}`).join(", ")}.`,
   };
 }
 

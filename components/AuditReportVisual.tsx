@@ -112,7 +112,7 @@ export function AuditReportVisual() {
             </span>
             <p className="text-[0.7rem] leading-tight text-muted">
               Read and written by{" "}
-              <span className="font-semibold text-ink">the Soch team</span>
+              <span className="font-semibold text-ink">the Soovita team</span>
               <br />
               Never a scoring tool
             </p>

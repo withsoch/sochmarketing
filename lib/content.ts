@@ -13,7 +13,7 @@ export const HERO = {
 };
 
 export const SITE = {
-  name: "Soch",
+  name: "Soovita",
   tagline:
     "Instagram, Google, reviews and delivery-app marketing for restaurants, cafes and shisha lounges.",
   // Placeholder contact details, replace before launch.
