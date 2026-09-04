@@ -42,7 +42,7 @@ export default function OpengraphImage() {
               color: "#1c2b26",
             }}
           >
-            Soch
+            Soovita
           </span>
         </div>
 

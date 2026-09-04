@@ -51,16 +51,16 @@ export const metadata: Metadata = {
     "restaurant marketing Tallinn",
   ],
   openGraph: {
-    title: "Soch: Marketing for Restaurant, Cafe & Lounge Owners",
+    title: "Soovita: Marketing for Restaurant, Cafe & Lounge Owners",
     description:
       "We run Instagram, Google, review replies and your Wolt or Bolt Food listing, for restaurants, cafes and shisha lounges. You approve every post. Packages from €290/month, starting in Tallinn.",
     url: SITE_URL,
-    siteName: "Soch",
+    siteName: "Soovita",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Soch: Marketing for Restaurant, Cafe & Lounge Owners",
+    title: "Soovita: Marketing for Restaurant, Cafe & Lounge Owners",
     description:
       "We run Instagram, Google, review replies and your Wolt or Bolt Food listing, for restaurants, cafes and shisha lounges. You approve every post. Packages from €290/month, starting in Tallinn.",
   },

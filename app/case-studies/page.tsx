@@ -6,9 +6,9 @@ import { AuditButton } from "@/components/AuditButton";
 import { CTAS, CASE_STUDIES } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Case Studies: Venue Results | Soch",
+  title: "Case Studies: Venue Results | Soovita",
   description:
-    "Illustrative results from Soch venue engagements: Google visibility, delivery listings, and review systems for restaurants, cafes and lounges.",
+    "Illustrative results from Soovita venue engagements: Google visibility, delivery listings, and review systems for restaurants, cafes and lounges.",
 };
 
 export default function CaseStudiesPage() {
