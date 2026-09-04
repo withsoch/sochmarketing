@@ -2,7 +2,8 @@
 
 import { useEffect } from "react";
 import { useAuditModal } from "@/context/AuditModalContext";
-import { BOOKING_URL } from "@/lib/content";
+import { BOOKING_URL, CAL_LINK } from "@/lib/content";
+import { openCalModal } from "@/lib/calEmbed";
 
 export function BookAutoOpen() {
   const { openModal: openAuditModal } = useAuditModal();
@@ -11,7 +12,11 @@ export function BookAutoOpen() {
     const params = new URLSearchParams(window.location.search);
 
     if (params.get("book") === "true") {
-      window.open(BOOKING_URL, "_blank", "noopener,noreferrer");
+      if (CAL_LINK) {
+        openCalModal(CAL_LINK);
+      } else {
+        window.open(BOOKING_URL, "_blank", "noopener,noreferrer");
+      }
       const url = new URL(window.location.href);
       url.searchParams.delete("book");
       window.history.replaceState({}, "", url.pathname);

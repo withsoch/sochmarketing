@@ -32,6 +32,15 @@ export const BOOKING_URL =
   "https://cal.com/consult-with-riz/marketing-discovery-call";
 
 /**
+ * The cal.com event slug (e.g. "consult-with-riz/marketing-discovery-call")
+ * extracted from BOOKING_URL, used to open the booking calendar as an
+ * in-page modal via the Cal.com embed instead of a new tab. Null if
+ * BOOKING_URL isn't a cal.com link, in which case CTAs fall back to a
+ * plain link that opens in a new tab.
+ */
+export const CAL_LINK = /^https?:\/\/(?:app\.)?cal\.com\/(.+)$/.exec(BOOKING_URL)?.[1] ?? null;
+
+/**
  * Where the CTAs send people to schedule via an embedded calendar.
  * Replace with your real Calendly / TidyCal link and the embed lights up
  * automatically. Until then a styled fallback card is shown.
