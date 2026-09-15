@@ -151,6 +151,10 @@
   .text-gradient { color: var(--color-brand); }
   .text-accent { color: var(--color-brand); }
 
+  /* Blog listing/hero type scale */
+  .text-16 { font-size: 1rem; line-height: 1.4; }
+  .text-14 { font-size: 0.875rem; line-height: 1.4; }
+
   /* ---------------------------------------------------------------- */
   /*  Blog article body - markdown rendered via react-markdown.       */
   /*  Appended by the Soch blog integration (see                      */
