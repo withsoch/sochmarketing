@@ -5,7 +5,7 @@ date: 2026-09-08
 category: "SEO"
 featured: false
 excerpt: "Master restaurant social media marketing with a platform-by-platform strategy built for independent owners. Learn what to post, when, and how to turn followers"
-image: "https://cdn.prod.website-files.com/68e7ded717d0693d2c34536a/6a1439e2c5bf402137be6270_image3_1179x884.png"
+image: "/blog/restaurant-social-media-marketing.webp"
 ---
 
 Restaurant social media marketing is the discipline most independent owners think they understand until the posting stops. The real problem is not content ideas or platform choice; it is the operational gap between having a plan and having someone who owns the daily publish-and-respond loop. This guide closes that gap with a step-by-step workflow built for owner-operators, not marketing agencies.
@@ -54,7 +54,7 @@ On hashtag strategy, local city hashtags consistently outperform generic food ha
 - **Google Business Profile:** not social in the traditional sense, but it closes intent that social content opens. Keep photos, hours, and posts current.
 - **Facebook:** strongest for event promotion and community groups in cities with active local dining scenes; weakest for organic discovery.
 
-Soovita's [Instagram management for restaurants and cafes](https://soovita.com/services/instagram-management) handles the platform-specific content production and scheduling that most kitchen-first teams cannot sustain alone.
+Soovita's [Instagram management for restaurants and cafes](https://www.soovita.com/services#social-media) handles the platform-specific content production and scheduling that most kitchen-first teams cannot sustain alone.
 
 ## Step 2: Build a content system your team will actually maintain
 
@@ -87,7 +87,7 @@ Response speed matters on two levels simultaneously. Algorithmically, platforms 
 
 **Pro Tip:** Create a shared document with three to five approved response templates for the most common DM types: reservation enquiries, allergen questions, and complaint acknowledgements. Templates are a starting point, not a script. Personalise one detail in every reply.
 
-For venues managing review volume across Google, delivery apps, and social platforms simultaneously, Soovita's [review reply service for local hospitality venues](https://soovita.com/services/review-management) handles the response workflow so the owner can focus on the floor.
+For venues managing review volume across Google, delivery apps, and social platforms simultaneously, Soovita's [review reply service for local hospitality venues](https://www.soovita.com/services#reviews) handles the response workflow so the owner can focus on the floor.
 
 ## Step 4: Measure what moves the needle, not just follower count
 
@@ -107,9 +107,7 @@ All three metrics are available inside native platform analytics on both Instagr
 - **Monthly audit step two:** identify the three posts with the highest reach and the three with the lowest. Look for format and topic patterns, not individual post performance.
 - **Monthly audit step three:** adjust the following month's content calendar based on format patterns, not gut feel. Document the decision so you can reverse-engineer what worked in three months' time.
 
-For venues running on delivery platforms alongside dine-in, link social traffic data to order volume by checking whether delivery app visit spikes follow high-reach posting days. Soovita's [delivery app listing optimisation for Tallinn restaurants](https://soovita.com/services/delivery-app-listings) ensures that the traffic social content generates lands on a listing that converts.
-
-**Further reading:** [How Soovita manages Instagram for independent restaurants and cafes](https://soovita.com/services/instagram-management)
+For venues running on delivery platforms alongside dine-in, link social traffic data to order volume by checking whether delivery app visit spikes follow high-reach posting days. Soovita's [delivery app listing optimisation for Tallinn restaurants](https://www.soovita.com/services#delivery-apps) ensures that the traffic social content generates lands on a listing that converts.
 
 ## Frequently Asked Questions
 
@@ -131,4 +129,4 @@ Every restaurant social media strategy eventually comes down to one question: wh
 
 Start by assigning publishing and community management responsibility to one named person this week. Then build your three content pillars, set your posting rhythm, and run your first 30-minute monthly audit after four weeks. The venues that sustain a social media presence are not the ones with the most creative content. They are the ones with the clearest internal ownership.
 
-If you are at the point where the workflow is clear but the execution capacity is not, [see how Soovita manages Instagram content, publishing, and community management for independent restaurants and cafes](https://soovita.com/services/instagram-management).
+If you are at the point where the workflow is clear but the execution capacity is not, [see how Soovita manages Instagram content, publishing, and community management for independent restaurants and cafes](https://www.soovita.com/services#social-media).
