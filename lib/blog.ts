@@ -5,6 +5,11 @@
 // markdown body, committed there by the Soch SEO pipeline (n8n
 // gkNsOpDjnRF1SNGe). Parsed at build time with gray-matter.
 //
+// A post may carry a SECOND language after a <!--lang:et--> marker, with its
+// own title_et / excerpt_et in frontmatter. Soovita publishes Estonian and
+// English in one file and the post page offers a toggle. Sites and posts
+// without the marker are unaffected.
+//
 // Keep this file identical across withsoch-web / signal-house / sochmarketing.
 
 import fs from "fs";
@@ -22,7 +27,15 @@ export type BlogPost = {
   excerpt: string;
   image: string;
   body: string;
+  /** Second-language variants, present only on bilingual posts. */
+  titleEt?: string;
+  excerptEt?: string;
+  bodyEt?: string;
 };
+
+/** Separates the English body from the Estonian one in a bilingual post.
+ *  The SEO pipeline writes this marker on its own line between the two. */
+const LANG_ET_MARKER = "<!--lang:et-->";
 
 /**
  * Frontmatter date as an ISO `YYYY-MM-DD` string.
@@ -55,6 +68,7 @@ export function getAllPosts(): BlogPost[] {
   const posts = files.map((file) => {
     const raw = fs.readFileSync(path.join(BLOG_DIR, file), "utf8");
     const { data, content } = matter(raw);
+    const [bodyEn, bodyEt] = content.split(LANG_ET_MARKER);
 
     return {
       slug: data.slug ?? file.replace(/\.md$/, ""),
@@ -64,7 +78,10 @@ export function getAllPosts(): BlogPost[] {
       featured: Boolean(data.featured),
       excerpt: data.excerpt ?? "",
       image: data.image ?? "",
-      body: content,
+      body: bodyEn.trim(),
+      bodyEt: bodyEt ? bodyEt.trim() : undefined,
+      titleEt: data.title_et ?? undefined,
+      excerptEt: data.excerpt_et ?? undefined,
     };
   });
 
