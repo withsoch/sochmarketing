@@ -18,7 +18,10 @@ export function BlogPostHero({ post }: { post: BlogPost }) {
         <Reveal>
           <div className="flex max-w-2xl flex-col gap-4">
             {post.category && <span className="eyebrow w-fit">{post.category}</span>}
-            <h1 className="text-h2">{post.title}</h1>
+            <h1 className="text-h2">
+              <span data-lang="en">{post.title}</span>
+              {post.titleEt && <span data-lang="et">{post.titleEt}</span>}
+            </h1>
             <div className="flex items-center gap-2 text-sm text-slate">
               <span>{formatPostDate(post.date)}</span>
               <span aria-hidden="true">&middot;</span>
