@@ -310,3 +310,13 @@
     html { scroll-behavior: auto; }
   }
 }
+
+/* Bilingual posts: both languages are rendered and PostLanguageToggle flips
+   data-post-lang on the wrapper. Without JavaScript the English stays visible. */
+[data-post-lang="en"] [data-lang="et"] {
+  display: none;
+}
+
+[data-post-lang="et"] [data-lang="en"] {
+  display: none;
+}
