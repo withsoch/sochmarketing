@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
+import { jsonLd, SITE_URL as SEO_SITE_URL } from "@/lib/seo";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { AuditModalProvider } from "@/context/AuditModalContext";
@@ -23,8 +24,20 @@ const poppins = Poppins({
   display: "swap",
 });
 
-// Placeholder domain, replace with the real one before launch.
-const SITE_URL = "https://soch.co";
+// The live domain. metadataBase resolves every canonical, og:url and og:image
+// against this — it was left as a placeholder (soch.co, a stranger's site)
+// until 2026-09-21, which pointed every share preview there.
+const SITE_URL = "https://www.soovita.com";
+
+/** Who the site is, for search engines and AI answer engines. */
+const SITE_ENTITY = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Soovita",
+  url: SEO_SITE_URL,
+  description: "Soovita runs Instagram, Google, review replies and Wolt or Bolt Food listings for restaurants, cafes and shisha lounges in Tallinn. Owners approve every post.",
+  sameAs: [],
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -77,6 +90,10 @@ export default function RootLayout({
       className={`${inter.variable} ${poppins.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col overflow-x-hidden bg-white">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: jsonLd(SITE_ENTITY) }}
+        />
         <AuditModalProvider>
           <BookAutoOpen />
           <Header />
